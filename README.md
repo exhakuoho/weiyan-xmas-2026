@@ -35,6 +35,9 @@
 - 網站：https://weiyan-xmas-2026.pages.dev/（可愛風）、https://weiyan-xmas-2026.pages.dev/?style=tech（科技風）
 - GitHub：`exhakuoho/weiyan-xmas-2026`（main 分支）→ Cloudflare Pages 專案 `weiyan-xmas-2026`（randd 帳號），推上 main 約 30 秒後自動更新
 - Repo 結構比照雷切網站：`index.html`、`img/`、`google-apps-script/Code.gs`、`README.md`（＝這份說明）
+- 官網 CAMP 頁（https://weiyan.designjarvis.com/camp）已有這個活動的卡片：repo `exhakuoho/weiyan-landing` 的 `index.html` → `_rawCamps()` 第一筆 `slug: 'xmas-2026'`。
+  **活動結束後**把那筆改成 `status: 'CLOSED', isOpen: false`，`note` 改「已結束」，就會移到「已結束的營隊」
+- 報名網站頁尾上方有「回到微研官網」橫幅，連到 https://weiyan.designjarvis.com/，Logo 用 `img/weiyan-logo-square.webp`（來源 `00_品牌素材/微研logo.jpg`）
 
 ## 目前的連動設定（2026-10-21 已上線測試）
 
