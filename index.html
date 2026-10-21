@@ -140,7 +140,9 @@ html[data-style=tech] header.nav.scrolled { background: rgba(4, 10, 24, .78); bo
 html[data-style=tech] .brand img { box-shadow: 0 0 16px rgba(47, 230, 255, .5); }
 .brand small { display: block; font: 600 11px var(--lfont); letter-spacing: .2em; color: var(--ink2); line-height: 1; }
 .nav-links { display: flex; gap: 4px; margin-left: auto; }
-.nav-links a { text-decoration: none; font-weight: 700; font-size: 17px; padding: 8px 14px; border-radius: 99px; transition: background .2s, color .2s; }
+/* 1024px（iPad 橫向）時五個連結會擠成兩行，所以 1180px 以下就收起來 */
+@media (max-width: 1180px) { .nav-links { display: none; } .switch { margin-left: auto; } }
+.nav-links a { white-space: nowrap; text-decoration: none; font-weight: 700; font-size: 17px; padding: 8px 14px; border-radius: 99px; transition: background .2s, color .2s; }
 .nav-links a:hover { background: var(--surface2); color: var(--a1); }
 html[data-style=tech] .nav-links a:hover { color: var(--a4); }
 .switch { position: relative; display: flex; padding: 4px; border-radius: 99px; background: var(--surface2); box-shadow: inset 0 0 0 2px var(--line); flex: none; }
@@ -532,7 +534,9 @@ html[data-style=tech] .due { background: rgba(255, 61, 110, .16); color: #FF9BB4
 #confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 300; }
 
 /* ================== 回官網橫幅 ================== */
-.home-banner { padding: 40px 0 10px; }
+.home-banner { position: relative; z-index: 1; padding: 10px 0 60px; }
+@media (max-width: 720px) { .home-banner { padding-bottom: 120px; } }
+html[data-style=cute] .home-banner { background: #FFE3C4; }
 .hb { position: relative; overflow: hidden; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 30px; padding: 30px 36px; text-decoration: none; color: inherit; transition: transform .35s var(--ease), box-shadow .35s; }
 .hb:hover { transform: translateY(-6px); box-shadow: var(--shadow-h); }
 .hb img { width: 132px; height: 132px; border-radius: 28px; background: #fff; box-shadow: 0 6px 0 rgba(0, 0, 0, .08); transition: transform .5s var(--spring); }
@@ -555,7 +559,7 @@ html[data-style=tech] .hb .go { background: var(--btn); color: var(--btn-ink); b
 }
 
 /* ================== 頁尾 ================== */
-footer { padding: 70px 0 120px; text-align: center; }
+footer { padding: 70px 0 30px; text-align: center; }
 html[data-style=cute] footer { background: linear-gradient(transparent, #FFE3C4); }
 html[data-style=tech] footer { border-top: 1px solid var(--line); }
 footer .fl { display: flex; flex-direction: column; align-items: center; gap: 14px; }
@@ -1043,19 +1047,6 @@ footer small { color: var(--ink2); font-size: 15px; }
 </dialog>
 <canvas id="confetti" aria-hidden="true"></canvas>
 
-<section class="home-banner">
-  <div class="wrap">
-    <a class="hb card" href="https://weiyan.designjarvis.com/">
-      <img src="img/weiyan-logo-square.webp" alt="微研 WEIYAN 科學教育・探索未來" loading="lazy">
-      <span>
-        <small>WEIYAN OFFICIAL SITE</small>
-        <b>還想玩更多？到微研官網逛逛！</b>
-        <p>AI 自走車、雷切科學課、3D 列印、營隊活動與每日科普，都在微研官網。</p>
-      </span>
-      <span class="go">前往微研官網<svg class="ico"><use href="#i-arrow"/></svg></span>
-    </a>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
@@ -1071,6 +1062,19 @@ footer small { color: var(--ink2); font-size: 15px; }
     </div>
   </div>
 </footer>
+<section class="home-banner">
+  <div class="wrap">
+    <a class="hb card" href="https://weiyan.designjarvis.com/">
+      <img src="img/weiyan-logo-square.webp" alt="微研 WEIYAN 科學教育・探索未來" loading="lazy">
+      <span>
+        <small>WEIYAN OFFICIAL SITE</small>
+        <b>還想玩更多？到微研官網逛逛！</b>
+        <p>AI 自走車、雷切科學課、3D 列印、營隊活動與每日科普，都在微研官網。</p>
+      </span>
+      <span class="go">前往微研官網<svg class="ico"><use href="#i-arrow"/></svg></span>
+    </a>
+  </div>
+</section>
 
 <div class="mobile-cta hide" id="mobileCta"><a href="#register" class="btn"><svg class="ico"><use href="#i-ticket"/></svg>立即報名・每位 NT$800</a></div>
 
