@@ -1,0 +1,1720 @@
+<!doctype html>
+<html lang="zh-Hant" data-style="cute">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>微研｜2026 聖誕科技闖關日・線上報名</title>
+<meta name="description" content="微研 2026 聖誕科技闖關日：禮物發射器、巨型雪球彈珠台、薑餅人造型師、魔法藥水調配、聽聲辨寶箱五大關卡。12/19–20 飛米樂高、12/25–27 高科大建工校區，國小二至六年級，每位 NT$800。">
+<meta property="og:title" content="2026 聖誕科技闖關日｜微研 Weiyan 科學教育">
+<meta property="og:description" content="五大科學關卡自由挑戰！12/19–20 飛米樂高、12/25–27 高科大建工校區，國小二至六年級，每位 NT$800。">
+<meta property="og:image" content="img/robot.webp">
+<meta name="theme-color" content="#B3261E">
+<link rel="icon" href="img/weiyan-symbol-96.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Huninn&family=Orbitron:wght@500;700;900&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<script>
+  // 風格：網址 ?style=cute|tech ＞ 上次的選擇 ＞ 預設可愛風（先設定好再畫面，避免閃爍）
+  (function () {
+    var q = new URLSearchParams(location.search).get('style'), s = null;
+    try { s = localStorage.getItem('xmas-style'); } catch (e) {}
+    document.documentElement.dataset.style = (q === 'cute' || q === 'tech') ? q : (s === 'tech' ? 'tech' : 'cute');
+  })();
+</script>
+<style>
+/* ================== 主題變數 ================== */
+:root { --maxw: 1200px; --ease: cubic-bezier(.2, .8, .2, 1); --spring: cubic-bezier(.34, 1.56, .64, 1); }
+html[data-style=cute] {
+  --bg: #FFF7EC; --bg2: #FFEBD3; --surface: #FFFFFF; --surface2: #FFF3E3;
+  --ink: #3A2214; --ink2: #7B5B45; --line: #F0D7BB;
+  --a1: #D7322B; --a2: #1E7A49; --a3: #F2A516; --a4: #2F7DE0; --a5: #E86FA0;
+  --r: 32px; --r-sm: 20px;
+  --hfont: 'Huninn', 'Fredoka', 'Noto Sans TC', sans-serif; --lfont: 'Fredoka', 'Huninn', sans-serif;
+  --shadow: 0 8px 0 #EDD2B2, 0 24px 44px -14px rgba(150, 80, 20, .28);
+  --shadow-h: 0 12px 0 #EDD2B2, 0 34px 54px -14px rgba(150, 80, 20, .34);
+  --btn: #D7322B; --btn-ink: #fff; --btn-shadow: 0 6px 0 #9E1F1A;
+  --input: #FFFDF9; --focus: #F2A516;
+  color-scheme: light;
+}
+html[data-style=tech] {
+  --bg: #040A18; --bg2: #08152F; --surface: rgba(10, 26, 56, .72); --surface2: rgba(18, 40, 80, .55);
+  --ink: #EAF6FF; --ink2: #93ADCF; --line: rgba(72, 200, 255, .26);
+  --a1: #FF3D6E; --a2: #21F0A8; --a3: #FFD23F; --a4: #2FE6FF; --a5: #A47BFF;
+  --r: 18px; --r-sm: 12px;
+  --hfont: 'Orbitron', 'Noto Sans TC', sans-serif; --lfont: 'Orbitron', sans-serif;
+  --shadow: 0 0 0 1px var(--line), 0 24px 60px -24px rgba(0, 190, 255, .45);
+  --shadow-h: 0 0 0 1px rgba(47, 230, 255, .7), 0 0 34px -4px rgba(47, 230, 255, .5), 0 30px 70px -24px rgba(0, 190, 255, .6);
+  --btn: linear-gradient(100deg, #2FE6FF, #21F0A8); --btn-ink: #04111F; --btn-shadow: 0 0 26px rgba(47, 230, 255, .55);
+  --input: rgba(4, 14, 34, .75); --focus: #2FE6FF;
+  color-scheme: dark;
+}
+html[data-style=tech] .only-c, html[data-style=cute] .only-t { display: none !important; }
+
+/* ================== 基本 ================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 500 19px/1.7 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+body.loading { overflow: hidden; }
+html[data-style=cute] body {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, #FFE0C2 0, transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, #FFE9D6 0, transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(215, 50, 43, .08) 1.6px, transparent 2px) 0 0 / 34px 34px,
+    var(--bg);
+}
+html[data-style=tech] body {
+  background:
+    radial-gradient(900px 600px at 80% -10%, rgba(47, 230, 255, .16), transparent 60%),
+    radial-gradient(800px 600px at 0% 40%, rgba(255, 61, 110, .10), transparent 60%),
+    linear-gradient(rgba(47, 230, 255, .055) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(47, 230, 255, .055) 1px, transparent 1px) 0 0 / 48px 48px,
+    var(--bg);
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+.wrap { width: min(var(--maxw), 100% - 32px); margin-inline: auto; }
+.ico { width: 1em; height: 1em; flex: none; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -.14em; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+::selection { background: var(--a3); color: #000; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 8px; }
+
+#snowfx { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+main, header, footer, .ticker { position: relative; z-index: 1; }
+#fx { position: fixed; inset: 0; pointer-events: none; z-index: 90; overflow: hidden; }
+#fx i { position: absolute; left: 0; top: 0; font-style: normal; pointer-events: none; will-change: transform, opacity; }
+#scrollbar { position: fixed; left: 0; top: 0; height: 4px; width: 100%; transform-origin: 0 50%; transform: scaleX(0); z-index: 120; background: linear-gradient(90deg, var(--a1), var(--a3), var(--a2)); }
+html[data-style=tech] #scrollbar { background: linear-gradient(90deg, var(--a4), var(--a2), var(--a1)); box-shadow: 0 0 12px var(--a4); }
+
+/* ================== 載入畫面 ================== */
+#loader { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: var(--bg); }
+#loader.out { pointer-events: none; }
+html[data-style=cute] #loader { background: radial-gradient(circle at 50% 45%, #FFF3E0, #FFD9B3); }
+html[data-style=cute] #loader.out { animation: iris .9s var(--ease) forwards; }
+@keyframes iris { from { clip-path: circle(150% at 50% 50%); } to { clip-path: circle(0% at 50% 50%); } }
+html[data-style=tech] #loader { background: radial-gradient(circle at 50% 50%, #0B2148, #02060F 70%); }
+html[data-style=tech] #loader.out { animation: crt .8s var(--ease) forwards; }
+@keyframes crt { 0% { clip-path: inset(0 0 0 0); filter: brightness(1); } 55% { clip-path: inset(49.6% 0 49.6% 0); filter: brightness(3); } 100% { clip-path: inset(50% 50% 50% 50%); filter: brightness(5); } }
+.ld { display: grid; justify-items: center; gap: 18px; text-align: center; padding: 20px; }
+.ld-gift { width: 150px; height: 150px; position: relative; animation: hop 1s var(--ease) infinite; }
+.ld-gift .lid { transform-origin: 50% 100%; animation: lid 1s var(--ease) infinite; }
+@keyframes hop { 0%, 100% { transform: translateY(0) scale(1, 1); } 30% { transform: translateY(0) scale(1.08, .9); } 55% { transform: translateY(-26px) scale(.95, 1.06); } 80% { transform: translateY(0) scale(1.05, .95); } }
+@keyframes lid { 0%, 40%, 100% { transform: translateY(0) rotate(0); } 60% { transform: translateY(-16px) rotate(-10deg); } }
+.ld-shadow { width: 110px; height: 14px; border-radius: 50%; background: rgba(150, 70, 20, .18); margin-top: -10px; animation: shadow 1s var(--ease) infinite; }
+@keyframes shadow { 55% { transform: scaleX(.7); opacity: .5; } }
+.ld-c-title { font: 400 30px/1.3 var(--hfont); color: var(--a1); letter-spacing: .06em; }
+.ld-bar { width: min(320px, 70vw); height: 18px; border-radius: 99px; background: #fff; box-shadow: inset 0 0 0 3px #F0C9A0; overflow: hidden; }
+.ld-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: repeating-linear-gradient(-45deg, #D7322B 0 12px, #fff 12px 24px); animation: stripes .6s linear infinite; }
+@keyframes stripes { to { background-position: 34px 0; } }
+.ld-pct { font: 700 22px var(--lfont); color: var(--ink2); }
+.ld-flakes span { position: absolute; color: #fff; font-size: 26px; text-shadow: 0 2px 6px rgba(200, 120, 60, .4); animation: fall 3s linear infinite; }
+@keyframes fall { from { transform: translateY(-10vh) rotate(0); } to { transform: translateY(110vh) rotate(360deg); } }
+.ld-t { font-family: 'Orbitron', monospace; color: #BFF6FF; }
+.ld-rings { width: 220px; height: 220px; position: relative; display: grid; place-items: center; }
+.ld-rings svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ld-rings .r1 { animation: spin 3s linear infinite; }
+.ld-rings .r2 { animation: spin 5s linear infinite reverse; }
+.ld-rings .r3 { animation: spin 1.6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.ld-num { font: 900 46px 'Orbitron'; color: #fff; text-shadow: 0 0 18px #2FE6FF, 0 0 40px rgba(47, 230, 255, .6); }
+.ld-num small { font-size: 18px; opacity: .7; }
+.ld-term { width: min(440px, 86vw); text-align: left; font: 500 13px/1.9 'Orbitron', monospace; letter-spacing: .06em; color: #7FE9FF; min-height: 104px; }
+.ld-term div { white-space: nowrap; overflow: hidden; }
+.ld-term .ok { color: #21F0A8; }
+.ld-seg { display: flex; gap: 4px; width: min(440px, 86vw); }
+.ld-seg i { flex: 1; height: 10px; background: rgba(47, 230, 255, .14); transform: skewX(-20deg); transition: background .2s, box-shadow .2s; }
+.ld-seg i.on { background: #2FE6FF; box-shadow: 0 0 10px #2FE6FF; }
+
+/* ================== 導覽列 ================== */
+header.nav { position: sticky; top: 0; z-index: 80; transition: background .3s, box-shadow .3s, backdrop-filter .3s; }
+header.nav.scrolled { backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); }
+html[data-style=cute] header.nav.scrolled { background: rgba(255, 247, 236, .86); box-shadow: 0 6px 0 rgba(237, 210, 178, .7); }
+html[data-style=tech] header.nav.scrolled { background: rgba(4, 10, 24, .78); box-shadow: 0 1px 0 var(--line), 0 10px 30px rgba(0, 0, 0, .4); }
+.nav-in { display: flex; align-items: center; gap: 18px; height: 78px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 900; font-size: 20px; flex: none; }
+.brand img { width: 44px; height: 44px; border-radius: 12px; background: #fff; padding: 4px; box-shadow: 0 4px 0 rgba(0, 0, 0, .08); }
+html[data-style=tech] .brand img { box-shadow: 0 0 16px rgba(47, 230, 255, .5); }
+.brand small { display: block; font: 600 11px var(--lfont); letter-spacing: .2em; color: var(--ink2); line-height: 1; }
+.nav-links { display: flex; gap: 4px; margin-left: auto; }
+.nav-links a { text-decoration: none; font-weight: 700; font-size: 17px; padding: 8px 14px; border-radius: 99px; transition: background .2s, color .2s; }
+.nav-links a:hover { background: var(--surface2); color: var(--a1); }
+html[data-style=tech] .nav-links a:hover { color: var(--a4); }
+.switch { position: relative; display: flex; padding: 4px; border-radius: 99px; background: var(--surface2); box-shadow: inset 0 0 0 2px var(--line); flex: none; }
+.switch button { position: relative; z-index: 1; border: 0; background: none; cursor: pointer; padding: 8px 14px; border-radius: 99px; font-weight: 900; font-size: 15px; display: flex; align-items: center; gap: 6px; color: var(--ink2); transition: color .3s; }
+.switch .knob { position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); border-radius: 99px; transition: transform .5s var(--spring), background .3s; }
+html[data-style=cute] .switch .knob { background: var(--a1); box-shadow: 0 3px 0 #9E1F1A; }
+html[data-style=tech] .switch .knob { transform: translateX(100%); background: linear-gradient(90deg, #2FE6FF, #21F0A8); box-shadow: 0 0 16px rgba(47, 230, 255, .7); }
+html[data-style=cute] .switch [data-set=cute], html[data-style=tech] .switch [data-set=tech] { color: #fff; }
+html[data-style=tech] .switch [data-set=tech] { color: #04111F; }
+.nav-cta { flex: none; }
+.burger { display: none; }
+
+/* ================== 按鈕 ================== */
+.btn {
+  --mx: 0px; --my: 0px;
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  border: 0; cursor: pointer; text-decoration: none; white-space: nowrap;
+  padding: 16px 30px; border-radius: 99px; font-weight: 900; font-size: 20px; letter-spacing: .04em;
+  background: var(--btn); color: var(--btn-ink); box-shadow: var(--btn-shadow);
+  transform: translate(var(--mx), var(--my)); transition: transform .25s var(--ease), box-shadow .25s, filter .2s;
+  overflow: hidden; isolation: isolate;
+}
+.btn::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .45) 50%, transparent 70%); transform: translateX(-120%); transition: transform .6s var(--ease); }
+.btn:hover::after { transform: translateX(120%); }
+.btn:hover { filter: brightness(1.06); }
+.btn:active { transform: translate(var(--mx), calc(var(--my) + 4px)); box-shadow: none; }
+html[data-style=tech] .btn { border-radius: 10px; clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); font-family: 'Orbitron', 'Noto Sans TC', sans-serif; }
+.btn.sm { padding: 10px 20px; font-size: 17px; }
+.btn.ghost { background: var(--surface); color: var(--ink); box-shadow: inset 0 0 0 3px var(--line), 0 6px 0 var(--line); }
+html[data-style=tech] .btn.ghost { box-shadow: inset 0 0 0 1px var(--a4); color: var(--a4); background: rgba(47, 230, 255, .06); }
+.btn[disabled] { opacity: .6; cursor: wait; }
+
+/* ================== 共用區塊 ================== */
+section { position: relative; padding: 110px 0; }
+.kicker { display: inline-flex; align-items: center; gap: 8px; font: 700 15px var(--lfont); letter-spacing: .22em; color: var(--a1); text-transform: uppercase; }
+html[data-style=tech] .kicker { color: var(--a4); }
+html[data-style=tech] .kicker::before { content: '//'; color: var(--a1); }
+.sec-head { text-align: center; max-width: 820px; margin: 0 auto 56px; }
+.sec-head h2 { font: 400 clamp(38px, 6vw, 72px)/1.15 var(--hfont); margin: 12px 0 14px; letter-spacing: .02em; }
+html[data-style=tech] .sec-head h2 { font-weight: 900; font-family: 'Noto Sans TC', sans-serif; letter-spacing: .04em; }
+.sec-head p { font-size: 21px; color: var(--ink2); margin: 0; }
+.hl-red { color: var(--a1); } .hl-green { color: var(--a2); } .hl-gold { color: var(--a3); }
+html[data-style=tech] .grad { background: linear-gradient(90deg, #2FE6FF, #21F0A8 50%, #FFD23F); -webkit-background-clip: text; background-clip: text; color: transparent; }
+html[data-style=cute] .grad { color: var(--a1); text-shadow: 3px 3px 0 #FFD7A8; }
+.card { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); }
+html[data-style=tech] .card { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+/* 出場用 animation（只填 backwards），結束後不會蓋掉 hover／傾斜的 transform */
+[data-reveal] { opacity: 0; }
+[data-reveal].in { opacity: 1; animation: revealIn .8s var(--ease) var(--d, 0s) backwards; }
+@keyframes revealIn { from { opacity: 0; transform: translateY(40px) scale(.98); } }
+
+/* ================== Hero ================== */
+.hero { padding: 40px 0 90px; min-height: calc(100vh - 78px); display: flex; align-items: center; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+.hero-tag { display: inline-flex; align-items: center; gap: 10px; padding: 8px 18px; border-radius: 99px; font-weight: 900; font-size: 17px; background: var(--surface); box-shadow: var(--shadow); }
+html[data-style=tech] .hero-tag { font-family: 'Orbitron', 'Noto Sans TC'; font-size: 14px; letter-spacing: .14em; color: var(--a4); border-radius: 6px; }
+.hero h1 { margin: 22px 0 10px; font: 400 clamp(64px, 10.5vw, 148px)/1 var(--hfont); letter-spacing: .02em; }
+.hero h1 .row { display: block; overflow: hidden; padding: .06em 0; }
+.hero h1 .row > span { display: inline-block; transform: translateY(110%); }
+body.go .hero h1 .row > span { animation: rise 1s var(--ease) forwards; }
+body.go .hero h1 .row:nth-child(2) > span { animation-delay: .12s; }
+@keyframes rise { to { transform: none; } }
+html[data-style=cute] .hero h1 .c1 { color: var(--a1); text-shadow: 0 6px 0 #FFD0A0, 0 14px 30px rgba(215, 50, 43, .25); }
+html[data-style=cute] .hero h1 .c2 { color: var(--a2); text-shadow: 0 6px 0 #CDEBD5, 0 14px 30px rgba(30, 122, 73, .25); }
+html[data-style=cute] .hero h1 .c3 { color: var(--ink); text-shadow: 0 6px 0 #FFD7A8; }
+html[data-style=tech] .hero h1 { font-family: 'Noto Sans TC', sans-serif; font-weight: 900; letter-spacing: .03em; }
+html[data-style=tech] .hero h1 .c1, html[data-style=tech] .hero h1 .c2, html[data-style=tech] .hero h1 .c3 { background: linear-gradient(100deg, #fff 10%, #2FE6FF 45%, #21F0A8 70%, #fff 95%) 0 0 / 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 22px rgba(47, 230, 255, .45)); animation: sheen 5s linear infinite; }
+html[data-style=tech] .hero h1 .c1 { background-image: linear-gradient(100deg, #fff 10%, #FF3D6E 45%, #FFD23F 70%, #fff 95%); filter: drop-shadow(0 0 22px rgba(255, 61, 110, .45)); }
+@keyframes sheen { to { background-position: -220% 0; } }
+.hero-sub { font: 400 clamp(24px, 3vw, 36px)/1.4 var(--hfont); margin: 8px 0 26px; color: var(--ink2); }
+html[data-style=tech] .hero-sub { font: 700 clamp(18px, 2.2vw, 24px)/1.5 'Orbitron', 'Noto Sans TC'; letter-spacing: .12em; color: var(--a4); }
+.hero-sub .typing::after { content: '▌'; animation: blink 1s steps(1) infinite; color: var(--a1); }
+@keyframes blink { 50% { opacity: 0; } }
+.chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 99px; background: var(--surface); box-shadow: var(--shadow); font-weight: 900; font-size: 18px; }
+.chip .ico { color: var(--a1); font-size: 22px; }
+html[data-style=tech] .chip { border-radius: 8px; box-shadow: inset 0 0 0 1px var(--line); background: rgba(47, 230, 255, .06); }
+html[data-style=tech] .chip .ico { color: var(--a4); }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.countdown { display: flex; gap: 12px; margin-top: 34px; align-items: stretch; flex-wrap: wrap; }
+.countdown .lbl { display: flex; align-items: center; gap: 8px; font-weight: 900; font-size: 17px; color: var(--ink2); width: 100%; }
+.cd { min-width: 86px; padding: 12px 8px 8px; text-align: center; border-radius: var(--r-sm); background: var(--surface); box-shadow: var(--shadow); }
+.cd b { display: block; font: 700 42px/1 var(--lfont); color: var(--a1); font-variant-numeric: tabular-nums; }
+html[data-style=tech] .cd b { color: #fff; text-shadow: 0 0 14px var(--a4); }
+.cd small { font-size: 14px; font-weight: 700; color: var(--ink2); }
+.cd b.tick { animation: tick .4s var(--spring); }
+@keyframes tick { from { transform: translateY(-30%) scale(.8); opacity: .2; } }
+
+.hero-art { position: relative; aspect-ratio: 1 / 1; display: grid; place-items: center; transform-style: preserve-3d; }
+.hero-art .blob { position: absolute; inset: 6%; border-radius: 46% 54% 52% 48% / 52% 44% 56% 48%; background: radial-gradient(circle at 35% 30%, #FFE7C2, #FFC891 60%, #FFB06B); animation: morph 9s ease-in-out infinite; box-shadow: inset 0 -20px 0 rgba(215, 50, 43, .08), 0 30px 60px -20px rgba(200, 100, 30, .45); }
+@keyframes morph { 50% { border-radius: 58% 42% 44% 56% / 44% 58% 42% 56%; transform: rotate(8deg); } }
+.hero-art .hud { position: absolute; inset: 0; }
+.hero-art .hud svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-art .hud .spinA { animation: spin 24s linear infinite; transform-origin: 50% 50%; }
+.hero-art .hud .spinB { animation: spin 14s linear infinite reverse; transform-origin: 50% 50%; }
+.hero-art .scan { position: absolute; left: 8%; right: 8%; height: 2px; top: 10%; background: linear-gradient(90deg, transparent, #2FE6FF, transparent); box-shadow: 0 0 18px #2FE6FF; animation: scan 3.2s ease-in-out infinite; }
+@keyframes scan { 50% { top: 88%; } }
+.hero-art .robot { position: relative; width: 112%; max-width: none; z-index: 2; transform: translate3d(var(--px, 0), var(--py, 0), 60px); transition: transform .2s linear; filter: drop-shadow(0 30px 30px rgba(120, 50, 10, .3)); animation: bob 4s ease-in-out infinite; }
+html[data-style=tech] .hero-art .robot { filter: drop-shadow(0 0 30px rgba(47, 230, 255, .35)) saturate(1.1); }
+@keyframes bob { 50% { translate: 0 -14px; } }
+.orbit { position: absolute; inset: -2%; z-index: 3; animation: spin 28s linear infinite; pointer-events: none; }
+.orbit span { position: absolute; width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: #fff; box-shadow: 0 6px 0 #F0D2AE, 0 12px 20px rgba(150, 70, 20, .2); color: var(--a1); font-size: 30px; animation: spin 28s linear infinite reverse; }
+.orbit span:nth-child(1) { top: 0; left: 50%; margin-left: -32px; }
+.orbit span:nth-child(2) { bottom: 8%; left: 2%; color: var(--a2); }
+.orbit span:nth-child(3) { bottom: 8%; right: 2%; color: var(--a3); }
+.float-tag { position: absolute; z-index: 4; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 16px; font-weight: 900; font-size: 17px; background: var(--surface); box-shadow: var(--shadow); animation: floaty 5s ease-in-out infinite; transform: translate3d(var(--tx, 0), var(--ty, 0), 0); }
+.float-tag .ico { color: var(--a1); font-size: 22px; }
+.float-tag.t1 { top: 8%; left: -4%; }
+.float-tag.t2 { bottom: 12%; right: -4%; animation-delay: -2.5s; }
+.float-tag.t2 .ico { color: var(--a2); }
+html[data-style=tech] .float-tag { border-radius: 6px; background: rgba(4, 14, 34, .85); box-shadow: inset 0 0 0 1px var(--a4), 0 0 20px rgba(47, 230, 255, .3); font-family: 'Orbitron', 'Noto Sans TC'; font-size: 14px; letter-spacing: .08em; color: var(--a4); }
+html[data-style=tech] .float-tag .ico { color: var(--a2); }
+@keyframes floaty { 50% { translate: 0 -12px; } }
+
+/* 跑馬燈 */
+.ticker { overflow: hidden; padding: 18px 0; transform: rotate(-1.5deg); margin: -10px -20px 0; }
+html[data-style=cute] .ticker { background: var(--a1); color: #FFF3DA; box-shadow: 0 8px 0 #9E1F1A; }
+html[data-style=tech] .ticker { background: linear-gradient(90deg, rgba(47, 230, 255, .14), rgba(255, 61, 110, .14)); border-block: 1px solid var(--line); color: var(--a4); }
+.ticker-in { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+.ticker span { display: inline-flex; align-items: center; gap: 14px; padding-right: 14px; font: 400 26px var(--hfont); white-space: nowrap; }
+html[data-style=tech] .ticker span { font: 700 18px 'Orbitron', 'Noto Sans TC'; letter-spacing: .12em; }
+.ticker .ico { color: var(--a3); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* 數字 */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.stat { padding: 28px 20px; text-align: center; }
+.stat .ico { font-size: 44px; color: var(--a1); margin-bottom: 6px; }
+.stat:nth-child(2) .ico { color: var(--a2); } .stat:nth-child(3) .ico { color: var(--a3); } .stat:nth-child(4) .ico { color: var(--a4); }
+.stat b { display: block; font: 700 clamp(48px, 6vw, 72px)/1 var(--lfont); }
+html[data-style=tech] .stat b { text-shadow: 0 0 20px rgba(47, 230, 255, .6); }
+.stat span { font-weight: 900; font-size: 19px; color: var(--ink2); }
+
+/* ================== 五大關卡 ================== */
+.stations { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+.st { grid-column: span 2; position: relative; cursor: pointer; text-align: left; border: 0; padding: 0; overflow: hidden; transform-style: preserve-3d; transition: transform .3s var(--ease), box-shadow .3s; display: flex; flex-direction: column; }
+.st:nth-child(4) { grid-column: 2 / span 2; }
+.st:hover { box-shadow: var(--shadow-h); }
+.st .glare { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(500px circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, .35), transparent 40%); opacity: 0; transition: opacity .3s; z-index: 3; }
+.st:hover .glare { opacity: 1; }
+.st .pic { position: relative; aspect-ratio: 4 / 3.3; overflow: hidden; }
+.st .pic img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.st:hover .pic img { transform: scale(1.08); }
+.st .num { position: absolute; top: 14px; left: 14px; z-index: 2; width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; font: 700 30px var(--lfont); color: #fff; background: var(--c); box-shadow: 0 5px 0 rgba(0, 0, 0, .18); border: 4px solid #fff; }
+.st .badge { position: absolute; top: 18px; right: 16px; z-index: 2; display: inline-flex; gap: 6px; align-items: center; padding: 6px 12px; border-radius: 99px; font-size: 15px; font-weight: 900; background: rgba(255, 255, 255, .92); color: #3A2214; }
+.st .body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.st h3 { margin: 0; font: 400 34px/1.2 var(--hfont); color: var(--c); display: flex; align-items: center; gap: 10px; }
+.st h3 .ico { font-size: 36px; }
+.st p { margin: 0; font-size: 19px; color: var(--ink2); }
+.st .more { margin-top: auto; padding-top: 10px; display: inline-flex; align-items: center; gap: 8px; font-weight: 900; color: var(--c); font-size: 18px; }
+.st .more .ico { transition: transform .3s var(--spring); }
+.st:hover .more .ico { transform: translateX(6px); }
+html[data-style=tech] .st { background: linear-gradient(#0A1A38, #0A1A38) padding-box, conic-gradient(from var(--ang, 0deg), transparent 0 70%, var(--c) 85%, transparent) border-box; border: 2px solid transparent; }
+html[data-style=tech] .st:hover { animation: border-spin 2.4s linear infinite; }
+@property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes border-spin { to { --ang: 360deg; } }
+html[data-style=tech] .st .num { border-radius: 10px; border: 0; background: rgba(4, 14, 34, .85); color: var(--c); box-shadow: inset 0 0 0 2px var(--c), 0 0 18px var(--c); font-family: 'Orbitron'; }
+html[data-style=tech] .st .pic::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(4, 10, 24, .9)), repeating-linear-gradient(0deg, rgba(0, 0, 0, .12) 0 2px, transparent 2px 4px); }
+html[data-style=tech] .st h3 { font-family: 'Noto Sans TC', sans-serif; font-weight: 900; text-shadow: 0 0 18px var(--c); }
+html[data-style=tech] .st .badge { background: rgba(4, 14, 34, .85); color: var(--a4); box-shadow: inset 0 0 0 1px var(--a4); border-radius: 6px; font-family: 'Orbitron', 'Noto Sans TC'; font-size: 13px; }
+
+/* 關卡彈窗 */
+dialog.modal { border: 0; padding: 0; width: min(860px, calc(100% - 24px)); max-height: calc(100dvh - 24px); border-radius: var(--r); background: var(--surface); color: var(--ink); box-shadow: 0 40px 100px rgba(0, 0, 0, .45); overflow: auto; }
+html[data-style=tech] dialog.modal { background: #071430; box-shadow: 0 0 0 1px var(--a4), 0 0 60px rgba(47, 230, 255, .35); }
+dialog.modal::backdrop { background: rgba(30, 10, 0, .55); backdrop-filter: blur(6px); }
+html[data-style=tech] dialog.modal::backdrop { background: rgba(0, 4, 14, .75); }
+/* 彈窗本身只淡入（不用 transform），彩帶畫布放在彈窗裡才能用 fixed 蓋滿畫面 */
+dialog.modal[open] { animation: fadeIn .25s ease; }
+dialog.modal[open] > :not(canvas) { animation: pop .5s var(--spring); }
+@keyframes fadeIn { from { opacity: 0; } }
+@keyframes pop { from { opacity: 0; transform: translateY(30px) scale(.92); } }
+.m-grid { display: grid; grid-template-columns: 1fr 1.1fr; }
+.m-grid .pic { min-height: 100%; position: relative; }
+.m-grid .pic img { width: 100%; height: 100%; object-fit: cover; }
+.m-body { padding: 34px 32px; display: grid; gap: 14px; align-content: start; }
+.m-body h3 { margin: 0; font: 400 40px/1.15 var(--hfont); color: var(--c); }
+html[data-style=tech] .m-body h3 { font-family: 'Noto Sans TC'; font-weight: 900; text-shadow: 0 0 18px var(--c); }
+.m-body p { margin: 0; font-size: 19px; }
+.m-box { display: flex; gap: 14px; padding: 16px 18px; border-radius: var(--r-sm); background: var(--surface2); }
+.m-box .ico { font-size: 30px; color: var(--c); margin-top: 2px; }
+.m-box b { display: block; font-size: 16px; color: var(--ink2); }
+.mclose { position: absolute; top: 12px; right: 12px; z-index: 5; width: 46px; height: 46px; border-radius: 50%; border: 0; cursor: pointer; display: grid; place-items: center; font-size: 24px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); transition: transform .3s var(--spring); }
+.mclose:hover { transform: rotate(90deg) scale(1.1); }
+
+/* ================== 藥水實驗室 ================== */
+.lab { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 44px; }
+.lab-cup { position: relative; display: grid; place-items: center; }
+.lab-cup svg { width: min(340px, 80%); overflow: visible; }
+#liquid { transition: y .8s var(--spring), height .8s var(--spring), fill .9s ease; }
+.lab-target { position: absolute; top: 0; right: 4%; padding: 12px 14px; border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); text-align: center; font-weight: 900; font-size: 15px; transform: rotate(6deg); }
+.lab-target i { display: block; width: 74px; height: 50px; border-radius: 10px; margin: 6px auto 0; background: var(--tc, #888); box-shadow: inset 0 -6px 0 rgba(0, 0, 0, .12); }
+.lab h3 { margin: 0 0 8px; font: 400 42px/1.2 var(--hfont); }
+html[data-style=tech] .lab h3 { font-family: 'Noto Sans TC'; font-weight: 900; }
+.lab p { margin: 0 0 20px; color: var(--ink2); }
+.pours { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.pour { border: 0; cursor: pointer; padding: 16px 8px; border-radius: var(--r-sm); background: var(--surface2); font-weight: 900; font-size: 17px; display: grid; justify-items: center; gap: 6px; transition: transform .25s var(--spring), box-shadow .25s; box-shadow: inset 0 0 0 3px var(--line); }
+.pour:hover { transform: translateY(-4px) rotate(-2deg); }
+.pour:active { transform: scale(.94); }
+.pour .dot { width: 40px; height: 40px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--pc); box-shadow: inset -4px -4px 0 rgba(0, 0, 0, .12); }
+.pour small { font-weight: 700; font-size: 13px; color: var(--ink2); }
+.phbar { margin: 22px 0 8px; height: 22px; border-radius: 99px; position: relative; background: linear-gradient(90deg, #E8336D, #B04BD6, #6C5BE6, #3D6FE8, #1FA0B8, #3DBF7A); }
+.phbar i { position: absolute; top: -8px; width: 8px; height: 38px; border-radius: 4px; background: var(--ink); left: calc(var(--ph, 50) * 1%); transform: translateX(-50%); transition: left .8s var(--spring); box-shadow: 0 0 0 3px var(--surface); }
+.phlbl { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; color: var(--ink2); }
+.lab-msg { min-height: 64px; margin-top: 16px; padding: 14px 18px; border-radius: var(--r-sm); background: var(--surface2); font-weight: 700; }
+.lab-row { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+
+/* ================== 流程 ================== */
+.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+.flow-line { position: absolute; left: 12%; right: 12%; top: 48px; height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.flow-line i { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(var(--p, 0)); background: linear-gradient(90deg, var(--a1), var(--a3), var(--a2)); }
+html[data-style=tech] .flow-line i { background: linear-gradient(90deg, var(--a4), var(--a2)); box-shadow: 0 0 14px var(--a4); }
+.fstep { position: relative; text-align: center; }
+.fstep .n { position: relative; z-index: 1; width: 96px; height: 96px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center; font-size: 46px; color: #fff; background: var(--c); box-shadow: 0 7px 0 rgba(0, 0, 0, .18); border: 6px solid var(--bg); }
+html[data-style=tech] .fstep .n { border-radius: 22px; transform: rotate(45deg); background: rgba(4, 14, 34, .9); color: var(--c); box-shadow: inset 0 0 0 2px var(--c), 0 0 24px var(--c); border: 0; }
+html[data-style=tech] .fstep .n .ico { transform: rotate(-45deg); }
+.fstep .pic { border-radius: var(--r-sm); overflow: hidden; margin-bottom: 14px; aspect-ratio: 1.1; box-shadow: var(--shadow); }
+.fstep .pic img { width: 100%; height: 100%; object-fit: cover; }
+.fstep h3 { margin: 0 0 6px; font: 400 28px var(--hfont); }
+html[data-style=tech] .fstep h3 { font-family: 'Noto Sans TC'; font-weight: 900; }
+.fstep p { margin: 0; color: var(--ink2); font-size: 18px; }
+.free-note { margin-top: 40px; padding: 24px 28px; display: flex; gap: 18px; align-items: center; }
+.free-note .ico { font-size: 54px; color: var(--a2); }
+.free-note b { font-size: 22px; }
+
+/* ================== 活動資訊 ================== */
+.info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.info { padding: 28px 26px; display: grid; gap: 10px; align-content: start; transition: transform .3s var(--ease), box-shadow .3s; }
+.info:hover { transform: translateY(-6px); box-shadow: var(--shadow-h); }
+.info .ib { width: 66px; height: 66px; border-radius: 20px; display: grid; place-items: center; font-size: 34px; color: #fff; background: var(--c); box-shadow: 0 5px 0 rgba(0, 0, 0, .15); }
+html[data-style=tech] .info .ib { background: transparent; color: var(--c); box-shadow: inset 0 0 0 2px var(--c), 0 0 20px -4px var(--c); border-radius: 12px; }
+.info h3 { margin: 4px 0 0; font-size: 18px; color: var(--ink2); font-weight: 900; }
+.info .v { font: 400 28px/1.35 var(--hfont); }
+html[data-style=tech] .info .v { font-family: 'Noto Sans TC'; font-weight: 900; font-size: 26px; }
+.info small { font-size: 16px; color: var(--ink2); }
+.venues { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; }
+.venue { padding: 30px; }
+.venue-h { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.venue-h .ib { width: 60px; height: 60px; border-radius: 18px; display: grid; place-items: center; font-size: 30px; color: #fff; background: var(--c); flex: none; }
+html[data-style=tech] .venue-h .ib { background: transparent; color: var(--c); box-shadow: inset 0 0 0 2px var(--c), 0 0 18px -4px var(--c); }
+.venue-h h3 { margin: 0; font: 400 30px/1.2 var(--hfont); }
+html[data-style=tech] .venue-h h3 { font-family: 'Noto Sans TC'; font-weight: 900; }
+.venue-h small { display: block; font-size: 16px; color: var(--ink2); font-family: 'Noto Sans TC'; }
+.slots { display: grid; gap: 10px; }
+.slot-row { display: grid; grid-template-columns: 110px 1fr 1fr; gap: 10px; align-items: center; }
+.slot-row .d { font: 700 22px/1.1 var(--lfont); }
+.slot-row .d small { display: block; font: 700 14px 'Noto Sans TC'; color: var(--ink2); }
+.slot-btn { border: 0; cursor: pointer; padding: 12px 10px; border-radius: 14px; font-weight: 900; font-size: 17px; background: var(--surface2); box-shadow: inset 0 0 0 2px var(--line); display: flex; align-items: center; justify-content: center; gap: 6px; transition: transform .2s var(--spring), background .2s, color .2s; }
+.slot-btn:hover { transform: translateY(-3px); background: var(--c); color: #fff; }
+html[data-style=tech] .slot-btn:hover { background: rgba(47, 230, 255, .14); color: var(--a4); box-shadow: inset 0 0 0 1px var(--a4), 0 0 18px -4px var(--a4); }
+.slot-btn[disabled] { opacity: .4; cursor: not-allowed; transform: none; }
+.map-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-weight: 900; color: var(--c); text-decoration: none; }
+
+/* ================== FAQ ================== */
+.faq { display: grid; gap: 14px; max-width: 920px; margin: 0 auto; }
+.faq details { padding: 0; overflow: hidden; }
+.faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 22px 26px; font-weight: 900; font-size: 21px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .q { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; font-size: 24px; color: #fff; background: var(--c, var(--a1)); flex: none; }
+html[data-style=tech] .faq summary .q { background: transparent; color: var(--c, var(--a4)); box-shadow: inset 0 0 0 1.5px var(--c, var(--a4)); }
+.faq summary .pm { margin-left: auto; font-size: 26px; transition: transform .4s var(--spring); color: var(--ink2); }
+.faq details[open] summary .pm { transform: rotate(45deg); }
+.faq .ans { padding: 0 26px 24px 86px; color: var(--ink2); font-size: 19px; }
+.faq .ans b { color: var(--ink); }
+
+/* ================== 報名表 ================== */
+.reg-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 30px; }
+.rstep { padding: 18px; display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 17px; }
+.rstep .n { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; font: 700 22px var(--lfont); color: #fff; background: var(--c); flex: none; }
+html[data-style=tech] .rstep .n { border-radius: 10px; background: transparent; color: var(--c); box-shadow: inset 0 0 0 2px var(--c); }
+.rstep small { display: block; font-weight: 700; font-size: 14px; color: var(--ink2); }
+form#reg { padding: 44px; position: relative; overflow: hidden; }
+.fprog { position: absolute; left: 0; right: 0; top: 0; height: 8px; background: var(--surface2); }
+.fprog i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--a1), var(--a3), var(--a2)); transition: width .5s var(--ease); }
+html[data-style=tech] .fprog i { background: linear-gradient(90deg, var(--a4), var(--a2)); box-shadow: 0 0 12px var(--a4); }
+.fsec { display: flex; align-items: center; gap: 14px; margin: 38px 0 18px; font: 400 30px var(--hfont); }
+.fsec:first-of-type { margin-top: 10px; }
+html[data-style=tech] .fsec { font-family: 'Noto Sans TC'; font-weight: 900; }
+.fsec .n { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; font: 700 22px var(--lfont); color: #fff; background: var(--a1); }
+html[data-style=tech] .fsec .n { background: transparent; color: var(--a4); box-shadow: inset 0 0 0 2px var(--a4), 0 0 14px -2px var(--a4); }
+.fsec::after { content: ''; flex: 1; height: 3px; border-radius: 3px; background: var(--line); }
+.fsec small { font: 700 15px 'Noto Sans TC'; color: var(--ink2); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 20px; }
+.field { display: grid; gap: 8px; align-content: start; }
+.field > label, .field > .lb { font-weight: 900; font-size: 18px; display: flex; align-items: center; gap: 6px; }
+.field em { color: var(--a1); font-style: normal; }
+.opt { font-size: 14px; font-weight: 700; color: var(--ink2); padding: 2px 8px; border-radius: 99px; background: var(--surface2); }
+.field input[type=text], .field input[type=tel], .field input[type=email], .field input[type=date], .field select, .field textarea {
+  width: 100%; padding: 15px 18px; border-radius: 16px; border: 0; background: var(--input); font-size: 19px; font-weight: 700;
+  box-shadow: inset 0 0 0 2.5px var(--line); transition: box-shadow .2s, transform .2s; min-height: 58px;
+}
+html[data-style=tech] .field input, html[data-style=tech] .field select, html[data-style=tech] .field textarea { border-radius: 10px; box-shadow: inset 0 0 0 1px var(--line); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; box-shadow: inset 0 0 0 3px var(--focus), 0 0 0 5px color-mix(in srgb, var(--focus) 25%, transparent); }
+.field textarea { min-height: 96px; resize: vertical; }
+.field .hint { font-size: 15px; color: var(--ink2); }
+.field .msg { display: none; font-size: 15px; font-weight: 900; color: var(--a1); }
+.field.err .msg { display: block; }
+.field.err input, .field.err select, .field.err .pills { box-shadow: inset 0 0 0 3px var(--a1) !important; animation: shake .4s; }
+@keyframes shake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+.pills { display: flex; flex-wrap: wrap; gap: 10px; border-radius: 16px; }
+.pills label { position: relative; cursor: pointer; }
+.pills input { position: absolute; opacity: 0; pointer-events: none; }
+.pills span { display: inline-flex; align-items: center; gap: 6px; padding: 12px 20px; border-radius: 99px; font-weight: 900; font-size: 18px; background: var(--surface2); box-shadow: inset 0 0 0 2.5px var(--line); transition: all .25s var(--spring); }
+.pills input:checked + span { background: var(--a1); color: #fff; box-shadow: 0 4px 0 #9E1F1A; transform: translateY(-2px); }
+html[data-style=tech] .pills span { border-radius: 8px; box-shadow: inset 0 0 0 1px var(--line); }
+html[data-style=tech] .pills input:checked + span { background: rgba(47, 230, 255, .14); color: var(--a4); box-shadow: inset 0 0 0 2px var(--a4), 0 0 16px -2px var(--a4); }
+.pills input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+/* 場次選擇 */
+.sess-venue { margin-bottom: 18px; }
+.sess-venue h4 { margin: 0 0 10px; display: flex; align-items: center; gap: 8px; font-size: 19px; font-weight: 900; }
+.sess-venue h4 .ico { color: var(--c); font-size: 24px; }
+.sess-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.sess { position: relative; cursor: pointer; }
+.sess input { position: absolute; opacity: 0; pointer-events: none; }
+.sess .box { display: grid; gap: 2px; padding: 14px 16px; border-radius: 18px; background: var(--surface2); box-shadow: inset 0 0 0 2.5px var(--line); transition: all .25s var(--spring); }
+.sess .box b { font: 700 24px/1.1 var(--lfont); display: flex; align-items: center; gap: 8px; }
+.sess .box b .ico { font-size: 22px; color: var(--a3); }
+.sess .box span { font-weight: 700; font-size: 15px; color: var(--ink2); }
+.sess input:checked + .box { background: var(--c); color: #fff; box-shadow: 0 6px 0 rgba(0, 0, 0, .2); transform: translateY(-3px) scale(1.02); }
+.sess input:checked + .box span, .sess input:checked + .box b .ico { color: #fff; }
+.sess input:disabled + .box { opacity: .4; cursor: not-allowed; }
+.sess input:focus-visible + .box { outline: 3px solid var(--focus); outline-offset: 2px; }
+html[data-style=tech] .sess .box { border-radius: 10px; box-shadow: inset 0 0 0 1px var(--line); }
+html[data-style=tech] .sess input:checked + .box { background: rgba(47, 230, 255, .12); color: var(--ink); box-shadow: inset 0 0 0 2px var(--c), 0 0 22px -4px var(--c); }
+html[data-style=tech] .sess input:checked + .box span { color: var(--a4); }
+#sessField.err .sess .box { box-shadow: inset 0 0 0 2.5px var(--a1); }
+
+/* 孩子卡 */
+.kid { position: relative; padding: 26px; border-radius: 24px; background: var(--surface2); margin-bottom: 18px; animation: kidIn .5s var(--spring); }
+html[data-style=tech] .kid { border-radius: 12px; box-shadow: inset 0 0 0 1px var(--line); }
+@keyframes kidIn { from { opacity: 0; transform: translateY(20px) scale(.97); } }
+.kid.bye { animation: kidOut .35s var(--ease) forwards; }
+@keyframes kidOut { to { opacity: 0; transform: scale(.9); } }
+.kid-h { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.kid-h .av { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-size: 28px; color: #fff; background: var(--a2); }
+html[data-style=tech] .kid-h .av { border-radius: 10px; background: transparent; color: var(--a2); box-shadow: inset 0 0 0 2px var(--a2); }
+.kid-h b { font: 400 26px var(--hfont); }
+html[data-style=tech] .kid-h b { font-family: 'Noto Sans TC'; font-weight: 900; }
+.kid-del { margin-left: auto; border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 99px; font-weight: 900; font-size: 15px; background: var(--surface); color: var(--a1); box-shadow: inset 0 0 0 2px var(--line); }
+.add-kid { width: 100%; border: 3px dashed var(--line); background: transparent; cursor: pointer; padding: 18px; border-radius: 22px; font-weight: 900; font-size: 20px; color: var(--a2); display: flex; align-items: center; justify-content: center; gap: 10px; transition: background .2s, transform .2s var(--spring); }
+.add-kid:hover { background: var(--surface2); transform: scale(1.01); }
+.add-kid[hidden], .kid-del[hidden] { display: none; }
+.quick { display: flex; flex-wrap: wrap; gap: 6px; }
+.quick button { border: 0; cursor: pointer; padding: 5px 12px; border-radius: 99px; font-size: 14px; font-weight: 900; background: var(--surface); box-shadow: inset 0 0 0 2px var(--line); }
+.quick button:hover { color: var(--a1); }
+.id-note { display: flex; gap: 8px; align-items: center; font-size: 15px; color: var(--ink2); }
+.id-note .ico { color: var(--a2); }
+
+.check { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: 18px; background: var(--surface2); cursor: pointer; font-size: 18px; margin-bottom: 12px; transition: box-shadow .2s; }
+.check input { width: 26px; height: 26px; margin: 2px 0 0; accent-color: var(--a1); flex: none; cursor: pointer; }
+html[data-style=tech] .check input { accent-color: #2FE6FF; }
+.check.err { box-shadow: inset 0 0 0 3px var(--a1); animation: shake .4s; }
+.check b { color: var(--ink); }
+.check small { display: block; color: var(--ink2); font-size: 16px; margin-top: 4px; }
+.allergens { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.allergens span { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 99px; background: var(--surface); font-size: 15px; font-weight: 900; box-shadow: inset 0 0 0 2px var(--line); }
+.inline-sw { display: inline-flex; align-items: center; gap: 8px; font-weight: 900; font-size: 17px; cursor: pointer; padding: 8px 14px; border-radius: 99px; background: var(--surface2); }
+.inline-sw input { width: 22px; height: 22px; accent-color: var(--a2); }
+
+.summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin: 30px 0 22px; padding: 22px 26px; border-radius: 22px; background: linear-gradient(120deg, #FFF0D6, #FFE1E0); }
+html[data-style=tech] .summary { background: linear-gradient(120deg, rgba(47, 230, 255, .1), rgba(255, 61, 110, .1)); box-shadow: inset 0 0 0 1px var(--line); }
+.summary .l { display: grid; gap: 2px; font-weight: 900; }
+.summary .l small { font-weight: 700; color: var(--ink2); font-size: 16px; }
+.summary .amt { font: 700 clamp(40px, 6vw, 56px)/1 var(--lfont); color: var(--a1); }
+html[data-style=tech] .summary .amt { color: #fff; text-shadow: 0 0 18px var(--a4); }
+#submitBtn { width: 100%; font-size: 24px; padding: 20px; }
+.form-err { display: none; margin-top: 14px; padding: 14px 18px; border-radius: 14px; background: #FFE3E0; color: #9E1F1A; font-weight: 900; }
+html[data-style=tech] .form-err { background: rgba(255, 61, 110, .14); color: #FF9BB4; }
+.form-err.on { display: block; animation: shake .4s; }
+.hp { position: absolute; left: -9999px; }
+
+/* 付款／完成視窗 */
+#done .m-body { padding: 44px 36px 36px; text-align: center; justify-items: center; }
+#done .big { width: 110px; height: 110px; border-radius: 50%; display: grid; place-items: center; font-size: 58px; color: #fff; background: var(--a2); box-shadow: 0 8px 0 rgba(0, 0, 0, .15); }
+html[data-style=tech] #done .big { background: transparent; color: var(--a2); box-shadow: inset 0 0 0 3px var(--a2), 0 0 40px -4px var(--a2); border-radius: 24px; }
+#done .amt { font: 700 48px/1 var(--lfont); color: var(--a1); }
+html[data-style=tech] #done .amt { color: #fff; text-shadow: 0 0 18px var(--a4); }
+#done .qr { width: 220px; border-radius: 16px; background: #fff; padding: 8px; box-shadow: var(--shadow); }
+.bank { display: flex; align-items: center; gap: 14px; justify-content: center; flex-wrap: wrap; padding: 14px 20px; border-radius: 16px; background: var(--surface2); font-weight: 700; }
+.bank b { font: 700 26px var(--lfont); letter-spacing: .04em; }
+.due { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 99px; font-weight: 900; color: #fff; background: var(--a1); }
+html[data-style=tech] .due { background: rgba(255, 61, 110, .16); color: #FF9BB4; box-shadow: inset 0 0 0 1px var(--a1); }
+#last5 { width: min(260px, 100%); text-align: center; font: 700 34px var(--lfont); letter-spacing: .3em; padding: 12px; border-radius: 16px; border: 0; background: var(--input); box-shadow: inset 0 0 0 3px var(--line); }
+#last5:focus { outline: none; box-shadow: inset 0 0 0 3px var(--focus); }
+.ref { font: 700 28px var(--lfont); letter-spacing: .08em; padding: 10px 22px; border-radius: 14px; background: var(--surface2); }
+.mnote { font-size: 16px; color: var(--ink2); }
+.mnote a { color: var(--a2); font-weight: 900; }
+#confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 300; }
+
+/* ================== 頁尾 ================== */
+footer { padding: 70px 0 120px; text-align: center; }
+html[data-style=cute] footer { background: linear-gradient(transparent, #FFE3C4); }
+html[data-style=tech] footer { border-top: 1px solid var(--line); }
+footer .fl { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+footer img.logo { width: 220px; border-radius: 16px; background: #fff; padding: 10px 16px; }
+footer .links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+footer small { color: var(--ink2); font-size: 15px; }
+.mascots { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+.mascots img { width: 200px; border-radius: 24px; box-shadow: var(--shadow); transition: transform .4s var(--spring); }
+.mascots img:hover { transform: rotate(-4deg) scale(1.05); }
+
+.mobile-cta { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 70; display: none; transition: transform .4s var(--spring), opacity .3s; }
+.mobile-cta .btn { width: 100%; }
+.mobile-cta.hide { transform: translateY(140%); opacity: 0; pointer-events: none; }
+
+/* ================== RWD ================== */
+@media (max-width: 1020px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-art { max-width: 560px; margin: 0 auto; width: 100%; order: -1; }
+  .hero { min-height: auto; padding-top: 10px; }
+  .stations { grid-template-columns: 1fr 1fr; }
+  .st, .st:nth-child(4) { grid-column: auto; }
+  .st:nth-child(5) { grid-column: 1 / -1; }
+  .st:nth-child(5) .pic { aspect-ratio: 16 / 8; }
+  .lab { grid-template-columns: 1fr; padding: 30px; }
+  .info-grid { grid-template-columns: 1fr 1fr; }
+  .venues { grid-template-columns: 1fr; }
+  .reg-steps { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+  .switch { margin-left: auto; }
+}
+@media (max-width: 720px) {
+  body { font-size: 18px; }
+  section { padding: 76px 0; }
+  .nav-in { height: 66px; gap: 10px; }
+  .brand span { display: none; }
+  .switch button { padding: 8px 10px; font-size: 14px; }
+  .nav-cta { display: none; }
+  .stats { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stations { grid-template-columns: 1fr; }
+  .st:nth-child(5) .pic { aspect-ratio: 4 / 3.3; }
+  .flow { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
+  .flow-line { display: none; }
+  .info-grid { grid-template-columns: 1fr; }
+  .grid2, .grid3 { grid-template-columns: 1fr; }
+  form#reg { padding: 28px 18px; }
+  .kid { padding: 20px 16px; }
+  .m-grid { grid-template-columns: 1fr; }
+  .m-grid .pic { aspect-ratio: 16 / 10; }
+  .m-body { padding: 26px 22px; }
+  .slot-row { grid-template-columns: 1fr 1fr; }
+  .slot-row .d { grid-column: 1 / -1; }
+  .faq .ans { padding: 0 22px 22px; }
+  .faq summary { font-size: 19px; padding: 18px; }
+  .reg-steps { grid-template-columns: 1fr; }
+  .mobile-cta { display: block; }
+  .float-tag { font-size: 14px; padding: 8px 12px; }
+  .float-tag.t1 { left: 0; } .float-tag.t2 { right: 0; }
+  .orbit span { width: 50px; height: 50px; font-size: 24px; margin-left: -25px !important; }
+  .cd { min-width: 0; flex: 1; } .cd b { font-size: 34px; }
+  .mascots img { width: 42%; }
+  .free-note { flex-direction: column; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  [data-reveal] { opacity: 1; transform: none; }
+  .hero h1 .row > span { transform: none; }
+}
+/* 切換風格的圓形展開 */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: wipe .75s var(--ease); }
+@keyframes wipe { from { clip-path: circle(0 at var(--wx, 50%) var(--wy, 0%)); } to { clip-path: circle(var(--wr, 150vmax) at var(--wx, 50%) var(--wy, 0%)); } }
+</style>
+</head>
+<body class="loading">
+
+<!-- ================== 圖示 ================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M20.7 7 3.3 17M9 3.5l3 2 3-2M9 20.5l3-2 3 2M3.6 10.2l2.6-.9-.5-2.7M18.3 7.6l-.5 2.7 2.6.9M3.6 13.8l2.6.9-.5 2.7M18.3 16.4l-.5-2.7 2.6-.9"/></symbol>
+    <symbol id="i-cookie" viewBox="0 0 24 24"><circle cx="12" cy="5.5" r="3.2"/><path d="M8.6 9.6h6.8l3.4 2.6-1.6 2.2-2.3-1.4v2.6l2.4 5.2h-3.2L12 17.6l-2.1 3.2H6.7l2.4-5.2V13l-2.3 1.4-1.6-2.2z"/><path d="M12 12h.01M12 14.5h.01"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21.5h11.6a2 2 0 0 0 1.7-3L14 9V3M7 15h10"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 9a3 3 0 0 0 0 6v4h18v-4a3 3 0 0 0 0-6V5H3zM13 5v2M13 17v2M13 11v2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-kid" viewBox="0 0 24 24"><circle cx="12" cy="6" r="3.5"/><path d="M6 21v-3a6 6 0 0 1 12 0v3M9 14l-3-3M15 14l3-3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-idcard" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.5"/><path d="M14 10h5M14 14h3M5 17c.5-1.5 1.6-2.2 3-2.2s2.5.7 3 2.2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+    <symbol id="i-tree" viewBox="0 0 24 24"><path d="m12 2 5 7h-3l4 6h-4l3 5H7l3-5H6l4-6H7zM12 20v2"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1zM12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2zM9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2zM19 2v4M21 4h-4M5 18v4M7 20H3"/></symbol>
+    <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M20 9V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0zM4 18v2M20 18v2"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 8h12l-1.5 13h-9zM5 8h14M12 8l3-6M7.4 13h9.2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-hour" viewBox="0 0 24 24"><path d="M5 22h14M5 2h14M17 22v-4.2a2 2 0 0 0-.6-1.4L12 12l-4.4 4.4a2 2 0 0 0-.6 1.4V22M7 2v4.2a2 2 0 0 0 .6 1.4L12 12l4.4-4.4a2 2 0 0 0 .6-1.4V2"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+    <symbol id="i-candy" viewBox="0 0 24 24"><path d="M9 21V8a3.5 3.5 0 0 1 7 0v1.5"/><path d="M9 12l3-2M9 16l3-2M9 20l3-2"/></symbol>
+    <symbol id="i-med" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 11v6M9 14h6"/></symbol>
+    <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 0-20 0zM12 12v7a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="m17 3 4 4-4 4M3 7h18M7 21l-4-4 4-4M21 17H3"/></symbol>
+    <symbol id="i-money" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4zM8 2v16M16 6v16"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.4L21 8M21 3v5h-5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ================== 載入畫面 ================== -->
+<div id="loader" role="status" aria-live="polite" aria-label="頁面載入中">
+  <div class="ld only-c">
+    <div class="ld-flakes" aria-hidden="true"></div>
+    <svg class="ld-gift" viewBox="0 0 120 120" aria-hidden="true">
+      <rect x="18" y="52" width="84" height="58" rx="8" fill="#D7322B"/>
+      <rect x="54" y="52" width="12" height="58" fill="#F2C14E"/>
+      <rect x="18" y="52" width="84" height="8" fill="rgba(0,0,0,.12)"/>
+      <g class="lid">
+        <rect x="12" y="38" width="96" height="18" rx="6" fill="#E8463E"/>
+        <rect x="54" y="38" width="12" height="18" fill="#F2C14E"/>
+        <path d="M60 38c-8-16-26-18-26-8s18 8 26 8zM60 38c8-16 26-18 26-8s-18 8-26 8z" fill="#1E7A49"/>
+        <circle cx="60" cy="37" r="5" fill="#F2C14E"/>
+      </g>
+    </svg>
+    <div class="ld-shadow" aria-hidden="true"></div>
+    <div class="ld-c-title">聖誕驚喜打包中…</div>
+    <div class="ld-bar"><i id="ldBarC"></i></div>
+    <div class="ld-pct"><span id="ldPctC">0</span>%</div>
+  </div>
+  <div class="ld ld-t only-t">
+    <div class="ld-rings" aria-hidden="true">
+      <svg viewBox="0 0 220 220"><circle class="r1" cx="110" cy="110" r="100" fill="none" stroke="#2FE6FF" stroke-width="2" stroke-dasharray="60 20 10 20" style="transform-origin:110px 110px"/></svg>
+      <svg viewBox="0 0 220 220"><circle class="r2" cx="110" cy="110" r="84" fill="none" stroke="#FF3D6E" stroke-width="3" stroke-dasharray="4 10" style="transform-origin:110px 110px"/></svg>
+      <svg viewBox="0 0 220 220"><circle class="r3" cx="110" cy="110" r="70" fill="none" stroke="#21F0A8" stroke-width="4" stroke-dasharray="110 330" stroke-linecap="round" style="transform-origin:110px 110px"/></svg>
+      <div class="ld-num"><span id="ldPctT">000</span><small>%</small></div>
+    </div>
+    <div class="ld-term" id="ldTerm"></div>
+    <div class="ld-seg" id="ldSeg"></div>
+  </div>
+</div>
+
+<canvas id="snowfx" aria-hidden="true"></canvas>
+<div id="fx" aria-hidden="true"></div>
+<div id="scrollbar" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><img src="img/weiyan-symbol-96.webp" alt="微研"><span>微研 WEIYAN<small class="only-c">CHRISTMAS LAB</small><small class="only-t">XMAS // LAB 2026</small></span></a>
+    <nav class="nav-links" aria-label="主要導覽">
+      <a href="#missions">五大關卡</a><a href="#lab">藥水實驗室</a><a href="#flow">闖關流程</a><a href="#info">活動資訊</a><a href="#faq">常見問題</a>
+    </nav>
+    <div class="switch" role="group" aria-label="切換網頁風格">
+      <span class="knob" aria-hidden="true"></span>
+      <button type="button" data-set="cute" aria-label="可愛風"><svg class="ico"><use href="#i-heart"/></svg>可愛</button>
+      <button type="button" data-set="tech" aria-label="科技風"><svg class="ico"><use href="#i-chip"/></svg>科技</button>
+    </div>
+    <a href="#register" class="btn sm nav-cta" data-mag><svg class="ico"><use href="#i-ticket"/></svg>立即報名</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ================== Hero ================== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag"><svg class="ico only-c" style="color:var(--a2)"><use href="#i-tree"/></svg><span class="only-c">2026 微研科學教育・聖誕特別活動</span><span class="only-t">WEIYAN // XMAS-LAB 2026</span></span>
+        <h1><span class="row"><span><span class="c1">聖誕</span><span class="c2">科技</span></span></span><span class="row"><span class="c3">闖關日</span></span></h1>
+        <p class="hero-sub"><span class="only-c">用科學點亮聖誕的驚喜 ✦</span><span class="only-t typing" id="typeLine"></span></p>
+        <div class="chips">
+          <span class="chip"><svg class="ico"><use href="#i-cal"/></svg>12/19–20、12/25–27</span>
+          <span class="chip"><svg class="ico"><use href="#i-kid"/></svg>國小二～六年級</span>
+          <span class="chip"><svg class="ico"><use href="#i-ticket"/></svg>每位 NT$800</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#register" class="btn" data-mag><svg class="ico"><use href="#i-rocket"/></svg>立即報名</a>
+          <a href="#missions" class="btn ghost" data-mag><svg class="ico"><use href="#i-target"/></svg>看五大關卡</a>
+        </div>
+        <div class="countdown" id="countdown" aria-live="off">
+          <span class="lbl"><svg class="ico"><use href="#i-hour"/></svg><span id="cdLabel">距離第一場闖關還有</span></span>
+          <div class="cd"><b id="cdD">--</b><small>天</small></div>
+          <div class="cd"><b id="cdH">--</b><small>時</small></div>
+          <div class="cd"><b id="cdM">--</b><small>分</small></div>
+          <div class="cd"><b id="cdS">--</b><small>秒</small></div>
+        </div>
+      </div>
+      <div class="hero-art" id="heroArt">
+        <div class="blob only-c"></div>
+        <div class="hud only-t" aria-hidden="true">
+          <svg viewBox="0 0 400 400">
+            <g class="spinA"><circle cx="200" cy="200" r="186" fill="none" stroke="rgba(47,230,255,.5)" stroke-width="1.5" stroke-dasharray="2 8"/><circle cx="200" cy="200" r="170" fill="none" stroke="rgba(47,230,255,.35)" stroke-width="1" stroke-dasharray="120 40 20 40"/></g>
+            <g class="spinB"><circle cx="200" cy="200" r="150" fill="none" stroke="rgba(255,61,110,.55)" stroke-width="2" stroke-dasharray="30 250"/><circle cx="200" cy="200" r="150" fill="none" stroke="rgba(33,240,168,.55)" stroke-width="2" stroke-dasharray="30 250" stroke-dashoffset="-470"/></g>
+            <path d="M20 70V20h50M330 20h50v50M380 330v50h-50M70 380H20v-50" fill="none" stroke="#2FE6FF" stroke-width="3"/>
+            <text x="28" y="396" fill="#2FE6FF" font-family="Orbitron" font-size="11" letter-spacing="2">UNIT: XMAS-BOT // ONLINE</text>
+            <text x="372" y="14" text-anchor="end" fill="#21F0A8" font-family="Orbitron" font-size="11" letter-spacing="2">5 MISSIONS READY</text>
+          </svg>
+          <div class="scan"></div>
+        </div>
+        <img class="robot" id="robot" src="img/robot.webp" alt="戴著馴鹿角的聖誕機器人開著自走車，載著禮物、彈珠台與音樂寶箱">
+        <div class="orbit only-c" aria-hidden="true"><span><svg class="ico"><use href="#i-star"/></svg></span><span><svg class="ico"><use href="#i-tree"/></svg></span><span><svg class="ico"><use href="#i-bell"/></svg></span></div>
+        <span class="float-tag t1"><svg class="ico"><use href="#i-gift"/></svg><span class="only-c">禮物發射中！</span><span class="only-t">GIFT LAUNCHER: ON</span></span>
+        <span class="float-tag t2"><svg class="ico"><use href="#i-spark"/></svg><span class="only-c">5 關等你解鎖</span><span class="only-t">5 / 5 UNLOCKED</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker-in" id="ticker"></div></div>
+
+  <!-- ================== 數字 ================== -->
+  <section style="padding-bottom:40px">
+    <div class="wrap stats">
+      <div class="stat card" data-reveal><svg class="ico"><use href="#i-target"/></svg><b data-count="5">0</b><span>大科學關卡</span></div>
+      <div class="stat card" data-reveal style="--d:.08s"><svg class="ico"><use href="#i-clock"/></svg><b data-count="90">0</b><span>分鐘沉浸體驗</span></div>
+      <div class="stat card" data-reveal style="--d:.16s"><svg class="ico"><use href="#i-cal"/></svg><b data-count="10">0</b><span>個場次可選</span></div>
+      <div class="stat card" data-reveal style="--d:.24s"><svg class="ico"><use href="#i-gift"/></svg><b data-count="3">0</b><span>樣聖誕好禮帶回家</span></div>
+    </div>
+  </section>
+
+  <!-- ================== 五大關卡 ================== -->
+  <section id="missions">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker"><span class="only-c">✦ Five Missions ✦</span><span class="only-t">MISSION SELECT</span></span>
+        <h2>五大關卡，<span class="grad">自由挑戰！</span></h2>
+        <p>不用照順序，哪關人少就先玩哪關。點開卡片看看怎麼玩 👇</p>
+      </div>
+      <div class="stations" id="stations"></div>
+    </div>
+  </section>
+
+  <dialog class="modal" id="stModal" aria-labelledby="stTitle">
+    <button class="mclose" type="button" data-close aria-label="關閉"><svg class="ico"><use href="#i-x"/></svg></button>
+    <div class="m-grid">
+      <div class="pic"><img id="stImg" alt=""></div>
+      <div class="m-body">
+        <span class="kicker" id="stKick"></span>
+        <h3 id="stTitle"></h3>
+        <p id="stDesc"></p>
+        <div class="m-box"><svg class="ico"><use href="#i-spark"/></svg><div><b>背後的科學</b><span id="stSci"></span></div></div>
+        <div class="m-box"><svg class="ico"><use href="#i-gift"/></svg><div><b>你會得到</b><span id="stGet"></span></div></div>
+        <div class="m-box"><svg class="ico"><use href="#i-rocket"/></svg><div><b>關卡旁的延伸課程</b><span id="stCourse"></span></div></div>
+        <a href="#register" class="btn" data-close-go><svg class="ico"><use href="#i-ticket"/></svg>我要來挑戰</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ================== 藥水實驗室 ================== -->
+  <section id="lab" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker"><span class="only-c">✦ Try it now ✦</span><span class="only-t">SIMULATION 04</span></span>
+        <h2>先在這裡<span class="grad">調一杯魔法藥水</span></h2>
+        <p>第 4 關的小預告：蝶豆花是天然的「酸鹼偵測器」，加不同的東西會變色喔！</p>
+      </div>
+      <div class="lab card" data-reveal>
+        <div class="lab-cup">
+          <svg viewBox="0 0 240 300" aria-label="藥水杯">
+            <defs>
+              <clipPath id="cupClip"><path d="M40 40h160l-18 236a14 14 0 0 1-14 12H72a14 14 0 0 1-14-12z"/></clipPath>
+              <linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".3" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity=".25"/></linearGradient>
+            </defs>
+            <g clip-path="url(#cupClip)">
+              <rect x="0" y="0" width="240" height="300" fill="rgba(200,230,255,.18)"/>
+              <rect id="liquid" x="0" y="300" width="240" height="0" fill="#CFE7F5"/>
+              <g id="bubbles"></g>
+            </g>
+            <path d="M40 40h160l-18 236a14 14 0 0 1-14 12H72a14 14 0 0 1-14-12z" fill="url(#glass)" stroke="var(--ink2)" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M62 70l12 190" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".6"/>
+            <g id="stream"></g>
+          </svg>
+          <div class="lab-target"><span>目標色卡</span><i id="labTarget"></i><span id="labTargetName">紫色</span></div>
+        </div>
+        <div>
+          <h3>魔法藥水調配器</h3>
+          <p>先加<b>蝶豆花汁</b>，再用<b>雪碧</b>（偏酸）和<b>鹼性水</b>（偏鹼）調出右上角的目標顏色！</p>
+          <div class="pours">
+            <button class="pour" type="button" data-pour="pea" style="--pc:#3D5FD8"><span class="dot"></span>蝶豆花汁<small>中性・會變色</small></button>
+            <button class="pour" type="button" data-pour="sprite" style="--pc:#D9F2C4"><span class="dot"></span>雪碧<small>酸性 pH≈3</small></button>
+            <button class="pour" type="button" data-pour="alk" style="--pc:#BFE8FF"><span class="dot"></span>鹼性水<small>鹼性 pH≈10</small></button>
+          </div>
+          <div class="phbar" aria-hidden="true"><i id="phMark" style="--ph:50"></i></div>
+          <div class="phlbl"><span>酸 · 粉紅</span><span>紫</span><span>藍</span><span>鹼 · 藍綠</span></div>
+          <div class="lab-msg" id="labMsg" aria-live="polite">杯子是空的，先倒一點蝶豆花汁吧！</div>
+          <div class="lab-row">
+            <button class="btn sm ghost" type="button" id="labReset"><svg class="ico"><use href="#i-refresh"/></svg>倒掉重來</button>
+            <button class="btn sm ghost" type="button" id="labNew"><svg class="ico"><use href="#i-spark"/></svg>換一張色卡</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== 流程 ================== -->
+  <section id="flow">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker"><span class="only-c">✦ How it works ✦</span><span class="only-t">PROTOCOL</span></span>
+        <h2>闖關流程，<span class="grad">超簡單！</span></h2>
+        <p>報到領卡 → 自由闖關 → 集點兌換 → 帶回驚喜</p>
+      </div>
+      <div class="flow" id="flowWrap">
+        <div class="flow-line" aria-hidden="true"><i id="flowFill"></i></div>
+        <div class="fstep" data-reveal style="--c:var(--a1)">
+          <div class="n"><svg class="ico"><use href="#i-ticket"/></svg></div>
+          <div class="pic only-c"><img src="img/cute/checkin.webp" alt="孩子在服務台領取集點卡" loading="lazy"></div>
+          <h3>報到領卡</h3><p>到服務台報到，領取紙本集點卡，馬上開始。</p>
+        </div>
+        <div class="fstep" data-reveal style="--c:var(--a2);--d:.1s">
+          <div class="n"><svg class="ico"><use href="#i-target"/></svg></div>
+          <div class="pic only-c"><img src="img/cute/st2.webp" alt="孩子在雪球彈珠台闖關" loading="lazy"></div>
+          <h3>自由闖關</h3><p>五關不限順序，看集點卡挑還沒完成、人比較少的關卡。</p>
+        </div>
+        <div class="fstep" data-reveal style="--c:var(--a3);--d:.2s">
+          <div class="n"><svg class="ico"><use href="#i-star"/></svg></div>
+          <div class="pic only-c"><img src="img/cute/redeem.webp" alt="孩子在兌換區用點數換禮物" loading="lazy"></div>
+          <h3>集點兌換</h3><p>每過一關就蓋章集點，到兌換區換聖誕小禮物。</p>
+        </div>
+        <div class="fstep" data-reveal style="--c:var(--a4);--d:.3s">
+          <div class="n"><svg class="ico"><use href="#i-gift"/></svg></div>
+          <div class="pic only-c"><img src="img/cute/takehome.webp" alt="孩子帶著薑餅作品與特調飲料" loading="lazy"></div>
+          <h3>帶回驚喜</h3><p>薑餅人作品、特調飲料和兌換的禮物，通通帶回家！</p>
+        </div>
+      </div>
+      <div class="free-note card" data-reveal>
+        <svg class="ico"><use href="#i-sofa"/></svg>
+        <div><b>家長怎麼安排？</b><br>可以在休息區等候，也可以陪孩子一起進闖關區，<b>不需事先登記陪同人數</b>。每位孩子約 90 分鐘，尖峰時段可能稍微延長。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== 活動資訊 ================== -->
+  <section id="info">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker"><span class="only-c">✦ Save the date ✦</span><span class="only-t">EVENT DATA</span></span>
+        <h2>活動<span class="grad">小檔案</span></h2>
+        <p>兩個地點、五天、十個場次，挑一個最方便的！</p>
+      </div>
+      <div class="info-grid">
+        <div class="info card" data-reveal style="--c:var(--a1)"><span class="ib"><svg class="ico"><use href="#i-sun"/></svg></span><h3>上午場</h3><div class="v">09:00–12:00</div><small>建議最晚 10:30 進場</small></div>
+        <div class="info card" data-reveal style="--c:var(--a4);--d:.08s"><span class="ib"><svg class="ico"><use href="#i-moon"/></svg></span><h3>下午場</h3><div class="v">14:00–17:00</div><small>建議最晚 15:30 進場</small></div>
+        <div class="info card" data-reveal style="--c:var(--a2);--d:.16s"><span class="ib"><svg class="ico"><use href="#i-ticket"/></svg></span><h3>對象與費用</h3><div class="v">國小二～六年級<br>每位 NT$800</div><small>線上轉帳，活動日前 7 日完成</small></div>
+        <div class="info card" data-reveal style="--c:var(--a3)"><span class="ib"><svg class="ico"><use href="#i-hour"/></svg></span><h3>體驗時間</h3><div class="v">約 90 分鐘</div><small>自由入場、自由選關，尖峰可能延長</small></div>
+        <div class="info card" data-reveal style="--c:var(--a5);--d:.08s"><span class="ib"><svg class="ico"><use href="#i-gift"/></svg></span><h3>可以帶回</h3><div class="v">薑餅人作品・特調飲料・兌換禮物</div></div>
+        <div class="info card" data-reveal style="--c:var(--a1);--d:.16s"><span class="ib"><svg class="ico"><use href="#i-shield"/></svg></span><h3>安心保障</h3><div class="v">每位孩子投保<br>現場護理師駐點</div></div>
+      </div>
+      <div class="venues" id="venues"></div>
+    </div>
+  </section>
+
+  <!-- ================== FAQ ================== -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker"><span class="only-c">✦ Good to know ✦</span><span class="only-t">FAQ.LOG</span></span>
+        <h2>常見<span class="grad">問題</span></h2>
+      </div>
+      <div class="faq" id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- ================== 報名 ================== -->
+  <section id="register">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="kicker"><span class="only-c">✦ Join the adventure ✦</span><span class="only-t">REGISTER // NOW</span></span>
+        <h2>加入<span class="grad">聖誕探險隊！</span></h2>
+        <p>同一位家長可以一次幫兄弟姊妹一起報名（最多 4 位）</p>
+      </div>
+      <div class="reg-steps" data-reveal>
+        <div class="rstep card" style="--c:var(--a1)"><span class="n">1</span><span>填寫報名表<small>約 3 分鐘</small></span></div>
+        <div class="rstep card" style="--c:var(--a3)"><span class="n">2</span><span>轉帳＋回填末 5 碼<small>活動日前 7 日完成</small></span></div>
+        <div class="rstep card" style="--c:var(--a2)"><span class="n">3</span><span>收到確認信<small>核對款項後寄出</small></span></div>
+        <div class="rstep card" style="--c:var(--a4)"><span class="n">4</span><span>當天服務台報到<small>領卡開始闖關</small></span></div>
+      </div>
+
+      <form id="reg" class="card" novalidate data-reveal>
+        <div class="fprog"><i id="fprog"></i></div>
+
+        <div class="fsec"><span class="n">1</span>選擇場次</div>
+        <div class="field" id="sessField">
+          <div id="sessPick"></div>
+          <div class="msg">請選擇一個場次</div>
+        </div>
+
+        <div class="fsec"><span class="n">2</span>孩子資料<small>保險用，請依證件填寫</small></div>
+        <div id="kids"></div>
+        <button type="button" class="add-kid" id="addKid"><svg class="ico"><use href="#i-plus"/></svg>再加一位孩子（兄弟姊妹一起報名）</button>
+
+        <div class="fsec"><span class="n">3</span>監護人與緊急聯絡</div>
+        <div class="grid2">
+          <div class="field"><label for="guardianName">監護人姓名<em>*</em></label><input type="text" id="guardianName" maxlength="30" autocomplete="name" required><div class="msg">請填寫監護人姓名</div></div>
+          <div class="field"><label for="guardianPhone">監護人電話<em>*</em></label><input type="tel" id="guardianPhone" maxlength="20" autocomplete="tel" inputmode="tel" placeholder="0912345678" required><div class="msg">請填寫正確的電話號碼</div></div>
+        </div>
+        <div class="field" style="margin-top:18px"><label for="email">電子郵件<em>*</em></label><input type="email" id="email" maxlength="80" autocomplete="email" inputmode="email" placeholder="報名確認與活動通知會寄到這裡" required><div class="msg">請填寫正確的 Email</div></div>
+        <div style="margin:22px 0 14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <b style="font-size:19px"><svg class="ico" style="color:var(--a1)"><use href="#i-phone"/></svg> 緊急聯絡人</b>
+          <label class="inline-sw"><input type="checkbox" id="sameAsG">同監護人</label>
+        </div>
+        <div class="grid3">
+          <div class="field"><label for="emergencyName">姓名<em>*</em></label><input type="text" id="emergencyName" maxlength="30" required><div class="msg">請填寫緊急聯絡人</div></div>
+          <div class="field"><label for="emergencyRelation">與孩子關係<em>*</em></label><input type="text" id="emergencyRelation" maxlength="20" placeholder="例：母親、祖父" list="relList" required><div class="msg">請填寫關係</div>
+            <datalist id="relList"><option>父親</option><option>母親</option><option>祖父</option><option>祖母</option><option>外祖父</option><option>外祖母</option><option>其他親屬</option></datalist></div>
+          <div class="field"><label for="emergencyPhone">電話<em>*</em></label><input type="tel" id="emergencyPhone" maxlength="20" inputmode="tel" placeholder="0912345678" required><div class="msg">請填寫正確的電話號碼</div></div>
+        </div>
+
+        <div class="fsec"><span class="n">4</span>同意事項</div>
+        <div class="field" id="photoField" style="margin-bottom:16px">
+          <div class="lb"><svg class="ico" style="color:var(--a4)"><use href="#i-camera"/></svg>活動攝影與錄影<em>*</em></div>
+          <span class="hint">是否同意孩子的影像用於微研社群及活動宣傳？</span>
+          <div class="pills" role="radiogroup" aria-label="攝影同意">
+            <label><input type="radio" name="photo" value="同意"><span><svg class="ico"><use href="#i-check"/></svg>同意</span></label>
+            <label><input type="radio" name="photo" value="不同意"><span><svg class="ico"><use href="#i-x"/></svg>不同意</span></label>
+          </div>
+          <div class="msg">請選擇是否同意</div>
+        </div>
+        <label class="check" id="allergenBox"><input type="checkbox" id="allergenAck">
+          <span><b>我已確認食品成分與過敏原</b><small>薑餅人與特調飲料可能含有以下成分，若孩子有過敏請在上方「飲食過敏」註明，現場護理師與關主會特別留意。</small>
+            <span class="allergens"><span>🌾 麩質</span><span>🥚 蛋</span><span>🥛 奶</span><span>🥜 堅果</span><span>🫐 蝶豆花飲品</span><span>🥤 雪碧</span></span></span></label>
+        <label class="check" id="refundBox"><input type="checkbox" id="refundAck">
+          <span><b>我已閱讀付款與取消規則</b><small>活動日前 7 日完成轉帳，逾期釋出名額。距活動日 4 日以上取消退還 80%（每位 NT$640）；活動日前 3 日內取消或未到場不退款。名額可轉讓，最晚活動前 1 日提供新參加者及保險資料。遇颱風等不可抗力以改期為優先，無法參加新日期者全額退費。</small></span></label>
+        <label class="check" id="consentBox"><input type="checkbox" id="consent">
+          <span><b>我同意個人資料蒐集與使用</b><small>微研 Weiyan 科學教育蒐集上述資料，僅用於本次活動報名、辦理孩子活動保險、活動通知與緊急聯絡，不提供給保險以外的第三方，也不作其他用途。</small></span></label>
+
+        <div class="grid2" style="margin-top:20px">
+          <div class="field"><label for="source">從哪裡知道這個活動<span class="opt">選填</span></label>
+            <select id="source"><option value="">請選擇</option><option>傳單</option><option>親友推薦</option><option>Facebook／Instagram</option><option>LINE 群組</option><option>學校／補習班</option><option>飛米樂高</option><option>其他</option></select></div>
+          <div class="field"><label for="note">想跟我們說的話<span class="opt">選填</span></label><textarea id="note" maxlength="200" placeholder="例：兄弟姊妹想一起闖關、其他問題"></textarea></div>
+        </div>
+
+        <div class="hp" aria-hidden="true"><label>請勿填寫<input type="text" id="hp_x7" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="summary">
+          <div class="l"><span id="sumSess">尚未選擇場次</span><small id="sumKids">1 位孩子 × NT$800</small></div>
+          <div class="amt" id="sumAmt">NT$800</div>
+        </div>
+        <button type="submit" class="btn" id="submitBtn" data-mag><svg class="ico"><use href="#i-rocket"/></svg><span>送出報名</span></button>
+        <div class="form-err" id="formErr" role="alert"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<dialog class="modal" id="done" aria-label="報名後續步驟">
+  <button class="mclose" type="button" data-close aria-label="關閉"><svg class="ico"><use href="#i-x"/></svg></button>
+  <div class="m-body" id="m-pay">
+    <span class="big"><svg class="ico"><use href="#i-gift"/></svg></span>
+    <h3 style="color:var(--a2)">報名資料已送出！</h3>
+    <p>還差最後一步：請轉帳</p>
+    <div class="amt" id="payAmt">NT$800</div>
+    <span class="due"><svg class="ico"><use href="#i-clock"/></svg>付款期限：<span id="payDue"></span></span>
+    <img class="qr" src="img/pay-qr.png" alt="中國信託轉帳 QR Code，帳號 901890457506">
+    <div class="bank"><span>中國信託（822）營業部<br><b>901890457506</b></span><button class="btn sm ghost" id="copyAcc" type="button"><svg class="ico"><use href="#i-copy"/></svg><span>複製帳號</span></button></div>
+    <label for="last5" style="font-weight:900;font-size:19px">轉帳帳號末 5 碼</label>
+    <input id="last5" inputmode="numeric" maxlength="5" autocomplete="off" placeholder="12345">
+    <button class="btn" id="paySend" type="button"><svg class="ico"><use href="#i-check"/></svg><span>送出，完成報名</span></button>
+    <div class="form-err" id="payErr" role="alert"></div>
+    <p class="mnote">報名編號 <b id="payRef"></b>。現在不方便轉帳也沒關係，收件通知信已寄到 <b id="payMail"></b>，轉帳後直接回覆那封信、或透過 <a href="https://lin.ee/rZW93KN" target="_blank" rel="noopener">官方 LINE</a> 告訴我們末 5 碼即可。</p>
+  </div>
+  <div class="m-body" id="m-final" hidden>
+    <span class="big"><svg class="ico"><use href="#i-check"/></svg></span>
+    <h3 style="color:var(--a2)">報名完成！聖誕見 🎄</h3>
+    <p id="finalMsg"></p>
+    <div class="ref" id="doneRef">XMAS-000000</div>
+    <p class="mnote">請截圖保存報名編號，聯繫時提供即可。</p>
+    <button class="btn" type="button" data-close>好的</button>
+  </div>
+</dialog>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<footer>
+  <div class="wrap">
+    <div class="mascots only-c"><img src="img/cute/santa.webp" alt="" loading="lazy"><img src="img/cute/kids.webp" alt="" loading="lazy"></div>
+    <div class="fl">
+      <a href="#top"><img class="logo" src="img/weiyan-logo-480.webp" alt="微研 WEIYAN 科學教育"></a>
+      <div class="links">
+        <a class="btn sm ghost" href="https://lin.ee/rZW93KN" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>官方 LINE</a>
+        <a class="btn sm ghost" href="#register"><svg class="ico"><use href="#i-ticket"/></svg>回到報名表</a>
+      </div>
+      <div>2026 聖誕科技闖關日・12/19–20 飛米樂高・12/25–27 高科大建工校區行政大樓</div>
+      <small>圖片為活動情境示意。© 2026 微研 Weiyan 科學教育</small>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta hide" id="mobileCta"><a href="#register" class="btn"><svg class="ico"><use href="#i-ticket"/></svg>立即報名・每位 NT$800</a></div>
+
+<script>
+/* ================== 設定（部署前請確認） ================== */
+const CONFIG = {
+  // 部署 Google Apps Script 後，把網址（https://script.google.com/macros/s/.../exec）貼在這裡
+  SHEET_WEBHOOK_URL: 'https://script.google.com/macros/s/AKfycbxesmHAPaf6e4kPjhl9nX2UeZAWRD8cPos6SBUlHYmCNOVW6kCM1ry3i3XNlJPpP6Bn/exec',
+  PRICE: 800,
+  MAX_KIDS: 4,
+  PAY_DAYS_BEFORE: 7,
+  ACCOUNT: '901890457506',
+  // 地圖連結；飛米樂高的正式地址確定後再補
+  MAP_FEIMI: '',
+  MAP_NKUST: 'https://www.google.com/maps/search/?api=1&query=%E5%9C%8B%E7%AB%8B%E9%AB%98%E9%9B%84%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E5%BB%BA%E5%B7%A5%E6%A0%A1%E5%8D%80%E8%A1%8C%E6%94%BF%E5%A4%A7%E6%A8%93'
+};
+// 場次：id 要和 Apps Script 的 SESSIONS 一致
+const VENUES = [
+  { key: 'feimi', name: '飛米樂高', sub: '詳細地址於報名確認信通知', c: 'var(--a1)', map: () => CONFIG.MAP_FEIMI, dates: ['2026-12-19', '2026-12-20'] },
+  { key: 'nkust', name: '高科大建工校區', sub: '國立高雄科技大學建工校區・行政大樓', c: 'var(--a2)', map: () => CONFIG.MAP_NKUST, dates: ['2026-12-25', '2026-12-26', '2026-12-27'] }
+];
+const SLOTS = [{ k: 'AM', name: '上午', time: '09:00–12:00', start: '09:00', icon: 'i-sun' }, { k: 'PM', name: '下午', time: '14:00–17:00', start: '14:00', icon: 'i-moon' }];
+const WEEK = ['日', '一', '二', '三', '四', '五', '六'];
+const SESSIONS = [];
+VENUES.forEach(v => v.dates.forEach(d => SLOTS.forEach(s => {
+  const dt = new Date(d + 'T00:00:00+08:00');
+  // dt 是台灣時間 0 點；加 8 小時後用 UTC 取星期，不受訪客時區影響
+  SESSIONS.push({ id: d.slice(5, 7) + d.slice(8) + s.k, date: d, dt, start: new Date(`${d}T${s.start}:00+08:00`), slot: s, venue: v, md: `${+d.slice(5, 7)}/${+d.slice(8)}`, wk: WEEK[new Date(dt.getTime() + 8 * 36e5).getUTCDay()] });
+})));
+// 活動日結束後就不能再選
+const sessionOpen = s => Date.now() < s.dt.getTime() + 864e5;
+
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const root = document.documentElement;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer: fine)').matches;
+const style = () => root.dataset.style;
+const fmt = n => n.toLocaleString('en-US');
+const params = new URLSearchParams(location.search);
+
+/* ================== 關卡資料 ================== */
+const STATIONS = [
+  { name: '禮物發射器', icon: 'i-target', c: '#D7322B', ct: '#FF3D6E', short: '操控發射器自走車，瞄準聖誕標靶！',
+    desc: '親手操作會發射的自走車，調整方向和角度，把「禮物球」射向不同形狀的聖誕標靶。先練習一顆，再正式挑戰！',
+    sci: '角度和力道決定球飛行的路線——這就是「拋物線」。', get: '蓋章集點，練出神準手感！', course: 'STEAM × AI 自走車課程' },
+  { name: '巨型雪球彈珠台', icon: 'i-snow', c: '#1E7A49', ct: '#21F0A8', short: '投入雪球，看它彈跳落進五道球道！',
+    desc: '大型木板加上 3D 列印障礙物，棒球大小的「雪球」一路碰撞彈跳，最後落進五條不同的得分道。',
+    sci: '重力、碰撞反彈與機率：障礙物的位置會改變球的去向。', get: '蓋章集點，還能觀察 3D 列印零件！', course: '樂高積木 × STEAM 課程' },
+  { name: '薑餅人造型師', icon: 'i-cookie', c: '#C9781E', ct: '#FFD23F', short: '用彩色糖霜，裝飾專屬薑餅人！',
+    desc: '拿起不同顏色的糖霜，自由裝飾預烤好的薑餅人。不管有沒有做完，作品都會包裝好讓你帶回家！',
+    sci: '色彩搭配與造型設計，練習把腦中的點子變成作品。', get: '自己裝飾的薑餅人一隻（包裝帶回）', course: 'Minecraft 創意課程' },
+  { name: '魔法藥水調配', icon: 'i-flask', c: '#7B4FD0', ct: '#A47BFF', short: '抽色卡，調出指定顏色的特調飲料！',
+    desc: '抽一張色卡，用雪碧、鹼性水和蝶豆花汁調出卡片上的顏色。材料都可以喝，調好的特調可以帶走！',
+    sci: '蝶豆花是天然的酸鹼指示劑：遇酸變紫紅、遇鹼偏藍綠。', get: '親手調的特調飲料一杯', course: '雷切教具 × 108 課綱（酸鹼）' },
+  { name: '聽聲辨寶箱', icon: 'i-music', c: '#2F7DE0', ct: '#2FE6FF', short: '仔細聽聲音，找出對應的寶箱！',
+    desc: '關主會給出聲音線索，孩子要分辨不同紙盒和橡皮筋發出的聲音，找出藏著聲音的那個寶箱。',
+    sci: '聲音來自振動：材質、大小和鬆緊不同，聲音就不一樣。', get: '蓋章集點，耳朵變超靈敏！', course: '雷切教具 × 108 課綱' }
+];
+const stColor = s => style() === 'tech' ? s.ct : s.c;
+
+function renderStations() {
+  $('#stations').innerHTML = STATIONS.map((s, i) => `
+    <button class="st card" type="button" data-st="${i}" data-tilt data-reveal style="--c:${stColor(s)};--d:${i * .08}s" aria-label="查看第 ${i + 1} 關：${s.name}">
+      <span class="glare"></span>
+      <span class="pic">
+        <img class="only-c" src="img/cute/st${i + 1}.webp" alt="" loading="lazy">
+        <img class="only-t" src="img/tech/st${i + 1}.webp" alt="" loading="lazy">
+        <span class="num">${i + 1}</span>
+        <span class="badge"><svg class="ico"><use href="#i-clock"/></svg>約 5 分鐘</span>
+      </span>
+      <span class="body">
+        <h3><svg class="ico"><use href="#${s.icon}"/></svg>${s.name}</h3>
+        <p>${s.short}</p>
+        <span class="more">看玩法 <svg class="ico"><use href="#i-arrow"/></svg></span>
+      </span>
+    </button>`).join('');
+}
+function paintStations() { $$('.st').forEach((b, i) => b.style.setProperty('--c', stColor(STATIONS[i]))); }
+function openStation(i) {
+  const s = STATIONS[i], m = $('#stModal');
+  m.style.setProperty('--c', stColor(s));
+  $('#stImg').src = `img/${style()}/st${i + 1}.webp`;
+  $('#stImg').alt = s.name;
+  $('#stKick').textContent = style() === 'tech' ? `MISSION 0${i + 1}` : `第 ${i + 1} 關`;
+  $('#stTitle').textContent = s.name;
+  $('#stDesc').textContent = s.desc;
+  $('#stSci').textContent = s.sci;
+  $('#stGet').textContent = s.get;
+  $('#stCourse').textContent = s.course;
+  m.showModal();
+}
+
+/* ================== 場次 ================== */
+function renderVenues() {
+  $('#venues').innerHTML = VENUES.map((v, vi) => `
+    <div class="venue card" data-reveal style="--c:${v.c};--d:${vi * .1}s">
+      <div class="venue-h"><span class="ib"><svg class="ico"><use href="#i-pin"/></svg></span><div><h3>${v.name}</h3><small>${v.sub}</small></div></div>
+      <div class="slots">${SESSIONS.filter(s => s.venue === v).reduce((rows, s) => {
+        if (!rows.length || rows[rows.length - 1].date !== s.date) rows.push({ date: s.date, md: s.md, wk: s.wk, list: [] });
+        rows[rows.length - 1].list.push(s); return rows;
+      }, []).map(r => `<div class="slot-row"><div class="d">${r.md}<small>星期${r.wk}</small></div>${r.list.map(s =>
+        `<button type="button" class="slot-btn" data-pick="${s.id}" ${sessionOpen(s) ? '' : 'disabled'}><svg class="ico"><use href="#${s.slot.icon}"/></svg>${s.slot.name} ${s.slot.time}</button>`).join('')}</div>`).join('')}</div>
+      ${v.map() ? `<a class="map-link" href="${v.map()}" target="_blank" rel="noopener"><svg class="ico"><use href="#i-map"/></svg>在 Google 地圖查看</a>` : ''}
+    </div>`).join('');
+  $('#sessPick').innerHTML = VENUES.map(v => `
+    <div class="sess-venue" style="--c:${v.c}">
+      <h4><svg class="ico"><use href="#i-pin"/></svg>${v.name}</h4>
+      <div class="sess-grid">${SESSIONS.filter(s => s.venue === v).map(s => `
+        <label class="sess"><input type="radio" name="session" value="${s.id}" ${sessionOpen(s) ? '' : 'disabled'}>
+          <span class="box"><b><svg class="ico"><use href="#${s.slot.icon}"/></svg>${s.md}（${s.wk}）</b><span>${s.slot.name} ${s.slot.time}</span></span></label>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+/* ================== FAQ ================== */
+const FAQ = [
+  ['i-money', 'var(--a1)', '怎麼報名和付款？', '在本頁下方填寫報名表後，畫面會顯示轉帳帳號與 QR Code，<b>轉帳後回填帳號末 5 碼</b>就完成了。工作人員會在活動前核對款項，再寄電子郵件確認。'],
+  ['i-clock', 'var(--a3)', '付款期限是什麼時候？', '須於<b>活動日前 7 日</b>完成轉帳，期限內保留名額；逾期未付款會釋出名額。'],
+  ['i-swap', 'var(--a4)', '臨時不能參加怎麼辦？', '距活動日 <b>4 日以上</b>取消，退還活動費 80%（每位 NT$640）；活動日前 3 日內取消或未到場恕不退款。<br>已付款名額<b>可以轉讓</b>，最晚請於活動前 1 日提供新參加者及保險資料。'],
+  ['i-umbrella', 'var(--a2)', '遇到颱風或停班停課呢？', '遇颱風、停班停課或其他不可抗力時，<b>以改期為優先</b>；無法參加新日期者全額退費。'],
+  ['i-idcard', 'var(--a5)', '為什麼要填身分證字號？', '活動會<b>替每位孩子投保</b>，保險需要孩子的法定姓名、出生年月日與身分證／居留證號。資料只用於本次活動報名、保險與聯絡。'],
+  ['i-med', 'var(--a1)', '孩子有食物過敏可以參加嗎？', '可以！薑餅人與特調飲料可能含<b>麩質、蛋、奶、堅果、蝶豆花</b>等成分，請在報名表「飲食過敏」註明，現場護理師與關主會特別留意。'],
+  ['i-sofa', 'var(--a3)', '家長要一起進場嗎？', '家長可以在休息區等候，也可以陪孩子進闖關區，<b>不需事先登記陪同人數</b>。'],
+  ['i-hour', 'var(--a4)', '要玩多久？會遲到怎麼辦？', '每位孩子約 <b>90 分鐘</b>，五關自由選擇、不限順序，尖峰時段排隊可能延長。建議上午場 10:30、下午場 15:30 前進場，遲到現場會彈性處理。']
+];
+function renderFaq() {
+  $('#faqList').innerHTML = FAQ.map(([ic, c, q, a], i) => `
+    <details class="card" data-reveal style="--c:${c};--d:${(i % 4) * .05}s"><summary><span class="q"><svg class="ico"><use href="#${ic}"/></svg></span>${q}<svg class="ico pm"><use href="#i-plus"/></svg></summary><div class="ans">${a}</div></details>`).join('');
+}
+
+/* ================== 跑馬燈 ================== */
+function renderTicker() {
+  const items = [['i-tree', '聖誕科技闖關日'], ['i-cal', '12/19–20 飛米樂高'], ['i-pin', '12/25–27 高科大建工校區'], ['i-kid', '國小二～六年級'], ['i-ticket', '每位 NT$800'], ['i-target', '五大關卡自由挑戰'], ['i-gift', '集點換聖誕禮物']];
+  const one = items.map(([i, t]) => `<span><svg class="ico"><use href="#${i}"/></svg>${t}</span>`).join('');
+  $('#ticker').innerHTML = one + one;
+}
+
+renderStations(); renderVenues(); renderFaq(); renderTicker();
+
+/* ================== 載入畫面 ================== */
+const loader = $('#loader');
+(function runLoader() {
+  const t0 = performance.now(), MIN = reduce ? 200 : 1900;
+  let loaded = document.readyState === 'complete', pct = 0;
+  addEventListener('load', () => loaded = true);
+  setTimeout(() => loaded = true, 5000); // 網路慢時最多等 5 秒
+  // 可愛風：飄雪
+  const fl = $('.ld-flakes');
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('span');
+    s.textContent = ['❄', '✦', '❅'][i % 3];
+    s.style.cssText = `left:${Math.random() * 100}vw;animation-duration:${2.5 + Math.random() * 3}s;animation-delay:${-Math.random() * 4}s;font-size:${14 + Math.random() * 22}px`;
+    fl.appendChild(s);
+  }
+  // 科技風：開機訊息＋分段進度
+  const seg = $('#ldSeg'); seg.innerHTML = '<i></i>'.repeat(20);
+  const lines = ['> BOOT WEIYAN://XMAS-LAB', '> LOADING 5 MISSIONS ........ ', '> CALIBRATING SNOW PHYSICS ... ', '> SYNC GIFT LAUNCHER ......... ', '> ACCESS GRANTED_'];
+  const term = $('#ldTerm');
+  // 進度依「經過時間」計算，背景分頁降頻時也不會卡住；最多 8 秒一定進場
+  let doneAt = 0, p0 = 0, finished = false;
+  setTimeout(() => { if (!finished) { pct = 100; paint(); finish(); } }, 8000);
+  function tick(now) {
+    const el = now - t0;
+    if (loaded && el > MIN && !doneAt) { doneAt = now; p0 = pct; }
+    pct = doneAt ? p0 + (100 - p0) * Math.min(1, (now - doneAt) / 450) : 90 * (1 - Math.exp(-el / 1400));
+    paint();
+    if (pct < 100) requestAnimationFrame(tick); else finish();
+  }
+  function paint() {
+    const p = Math.round(pct);
+    $('#ldBarC').style.width = p + '%'; $('#ldPctC').textContent = p;
+    $('#ldPctT').textContent = String(p).padStart(3, '0');
+    $$('i', seg).forEach((s, i) => s.classList.toggle('on', i < p / 5));
+    const n = Math.min(lines.length, Math.floor(p / 20) + 1);
+    term.innerHTML = lines.slice(0, n).map((l, i) => `<div>${l}${i < n - 1 && i > 0 && i < 4 ? '<span class="ok">OK</span>' : ''}</div>`).join('');
+  }
+  function finish() {
+    if (finished) return; finished = true;
+    setTimeout(() => {
+      loader.classList.add('out');
+      document.body.classList.remove('loading');
+      document.body.classList.add('go');
+      typeLine();
+      setTimeout(() => loader.remove(), 1000);
+    }, reduce ? 0 : 260);
+  }
+  requestAnimationFrame(tick);
+})();
+
+/* 科技風副標打字效果 */
+function typeLine() {
+  const el = $('#typeLine'), txt = 'STEAM × 探索 × 挑戰 × 創造 // 用科學點亮聖誕';
+  if (reduce) { el.textContent = txt; return; }
+  let i = 0; el.textContent = '';
+  (function step() { el.textContent = txt.slice(0, ++i); if (i < txt.length) setTimeout(step, 55); })();
+}
+
+/* ================== 風格切換 ================== */
+function setStyle(next, ev) {
+  if (next === style()) return;
+  const apply = () => {
+    root.dataset.style = next;
+    try { localStorage.setItem('xmas-style', next); } catch (e) {}
+    paintStations(); snow.reset(); labPaint();
+    if (!document.body.classList.contains('loading')) typeLine();
+  };
+  if (!document.startViewTransition || reduce) { apply(); return; }
+  const r = ev ? ev.currentTarget.getBoundingClientRect() : { left: innerWidth / 2, top: 0, width: 0, height: 0 };
+  const x = r.left + r.width / 2, y = r.top + r.height / 2;
+  root.style.setProperty('--wx', x + 'px'); root.style.setProperty('--wy', y + 'px');
+  root.style.setProperty('--wr', Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y)) + 'px');
+  document.startViewTransition(apply);
+}
+$$('.switch button').forEach(b => b.addEventListener('click', e => setStyle(b.dataset.set, e)));
+
+/* ================== 背景雪花／粒子 ================== */
+const snow = (() => {
+  const c = $('#snowfx'), x = c.getContext('2d');
+  let W, H, ps = [], mx = -999, my = -999, wind = 0, run = !reduce;
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  function size() { W = c.width = innerWidth * dpr; H = c.height = innerHeight * dpr; c.style.width = innerWidth + 'px'; c.style.height = innerHeight + 'px'; }
+  function make(init) {
+    const tech = style() === 'tech', n = Math.round(Math.min(innerWidth, 1400) / (tech ? 22 : 16));
+    ps = Array.from({ length: n }, () => ({ x: Math.random() * W, y: init ? Math.random() * H : Math.random() * H, r: (tech ? 1 + Math.random() * 1.8 : 1.5 + Math.random() * 3.5) * dpr, v: (tech ? .25 + Math.random() * .6 : .4 + Math.random() * 1) * dpr, a: Math.random() * 6.28, star: !tech && Math.random() < .18 }));
+  }
+  function draw() {
+    if (!run) return;
+    x.clearRect(0, 0, W, H);
+    const tech = style() === 'tech';
+    wind += ((mx > 0 ? (mx / innerWidth - .5) * 1.6 : 0) - wind) * .02;
+    ps.forEach(p => {
+      p.a += .01;
+      if (tech) { p.y -= p.v; if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; } }
+      else { p.y += p.v; p.x += Math.sin(p.a) * .4 * dpr + wind * dpr; if (p.y > H + 10) { p.y = -10; p.x = Math.random() * W; } if (p.x > W + 10) p.x = -10; if (p.x < -10) p.x = W + 10; }
+      // 滑鼠附近的粒子被推開
+      const dx = p.x - mx * dpr, dy = p.y - my * dpr, d = Math.hypot(dx, dy);
+      if (d < 110 * dpr) { p.x += dx / d * 2.2; p.y += dy / d * 2.2; }
+      if (tech) {
+        x.fillStyle = `rgba(47,230,255,${.35 + Math.sin(p.a * 3) * .25})`; x.fillRect(p.x, p.y, p.r * 1.6, p.r * 1.6);
+      } else if (p.star) {
+        x.save(); x.translate(p.x, p.y); x.rotate(p.a); x.strokeStyle = 'rgba(255,255,255,.95)'; x.lineWidth = 1.4 * dpr; x.beginPath();
+        for (let k = 0; k < 3; k++) { x.moveTo(-p.r * 2, 0); x.lineTo(p.r * 2, 0); x.rotate(Math.PI / 3); } x.stroke(); x.restore();
+      } else {
+        x.fillStyle = 'rgba(255,255,255,.95)'; x.shadowColor = 'rgba(210,140,80,.5)'; x.shadowBlur = 4 * dpr;
+        x.beginPath(); x.arc(p.x, p.y, p.r, 0, 6.28); x.fill(); x.shadowBlur = 0;
+      }
+    });
+    // 科技風：滑鼠附近畫連線
+    if (tech && mx > 0) {
+      x.strokeStyle = 'rgba(47,230,255,.25)'; x.lineWidth = dpr;
+      ps.forEach(p => { const d = Math.hypot(p.x - mx * dpr, p.y - my * dpr); if (d < 180 * dpr) { x.globalAlpha = 1 - d / (180 * dpr); x.beginPath(); x.moveTo(p.x, p.y); x.lineTo(mx * dpr, my * dpr); x.stroke(); } });
+      x.globalAlpha = 1;
+    }
+    requestAnimationFrame(draw);
+  }
+  size(); make(true);
+  addEventListener('resize', () => { size(); make(true); });
+  addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+  document.addEventListener('visibilitychange', () => { const was = run; run = !document.hidden && !reduce; if (run && !was) draw(); });
+  if (run) draw();
+  return { reset: () => make(true) };
+})();
+
+/* ================== 游標星光＋點擊爆發 ================== */
+const fx = $('#fx');
+function particle(x0, y0, opt) {
+  const i = document.createElement('i'), tech = style() === 'tech';
+  const cols = tech ? ['#2FE6FF', '#21F0A8', '#FF3D6E', '#FFD23F'] : ['#D7322B', '#F2A516', '#1E7A49', '#E86FA0', '#2F7DE0'];
+  const col = cols[Math.floor(Math.random() * cols.length)];
+  const sz = opt.size || 14;
+  i.textContent = tech ? '' : ['✦', '❄', '★', '❅'][Math.floor(Math.random() * 4)];
+  i.style.cssText = tech ? `width:${sz / 2.5}px;height:${sz / 2.5}px;background:${col};box-shadow:0 0 8px ${col}` : `color:${col};font-size:${sz}px;line-height:1`;
+  fx.appendChild(i);
+  const ang = opt.ang ?? Math.random() * 6.28, dist = opt.dist ?? 40;
+  i.animate([
+    { transform: `translate(${x0}px,${y0}px) translate(-50%,-50%) scale(1) rotate(0)`, opacity: 1 },
+    { transform: `translate(${x0 + Math.cos(ang) * dist}px,${y0 + Math.sin(ang) * dist + (opt.fall || 0)}px) translate(-50%,-50%) scale(.2) rotate(${180 + Math.random() * 180}deg)`, opacity: 0 }
+  ], { duration: opt.dur || 700, easing: 'cubic-bezier(.2,.8,.2,1)' }).onfinish = () => i.remove();
+}
+if (fine && !reduce) {
+  let last = 0;
+  addEventListener('pointermove', e => {
+    const now = performance.now(); if (now - last < 45) return; last = now;
+    particle(e.clientX, e.clientY, { dist: 16, fall: 18, size: 10 + Math.random() * 8, dur: 800 });
+  }, { passive: true });
+}
+if (!reduce) addEventListener('pointerdown', e => {
+  if (e.target.closest('input, select, textarea, label, dialog')) return;
+  for (let k = 0; k < 12; k++) particle(e.clientX, e.clientY, { ang: k / 12 * 6.28, dist: 50 + Math.random() * 40, size: 12 + Math.random() * 10 });
+});
+
+/* ================== 捲動：進度條、導覽、出場動畫、流程線 ================== */
+const nav = $('#nav'), bar = $('#scrollbar'), mcta = $('#mobileCta');
+function onScroll() {
+  const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+  bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+  nav.classList.toggle('scrolled', y > 10);
+  const reg = $('#register').getBoundingClientRect();
+  mcta.classList.toggle('hide', y < innerHeight * .7 || reg.top < innerHeight * .9);
+  const fw = $('#flowWrap').getBoundingClientRect();
+  $('#flowFill').style.setProperty('--p', Math.max(0, Math.min(1, (innerHeight * .75 - fw.top) / (fw.height * .7))));
+}
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in'); io.unobserve(e.target);
+  const n = e.target.querySelector('[data-count]'); if (n) countUp(n);
+}), { threshold: 0, rootMargin: '0px 0px -12% 0px' }); // 報名表在手機上很高，用 0 才一定會觸發
+$$('[data-reveal]').forEach(el => io.observe(el));
+function countUp(el) {
+  const to = +el.dataset.count, t0 = performance.now(), dur = reduce ? 1 : 1400;
+  (function f(t) { const p = Math.min(1, (t - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(f); })(t0);
+  setTimeout(() => el.textContent = to, dur + 300); // 背景分頁不跑動畫時也會顯示正確數字
+}
+
+/* ================== 3D 傾斜卡片、磁吸按鈕、Hero 視差 ================== */
+if (fine && !reduce) {
+  document.addEventListener('pointermove', e => {
+    const card = e.target.closest('[data-tilt]');
+    $$('[data-tilt].tilting').forEach(c => { if (c !== card) { c.classList.remove('tilting'); c.style.transform = ''; } });
+    if (card) {
+      const r = card.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      card.classList.add('tilting');
+      card.style.transform = `perspective(900px) rotateX(${(.5 - py) * 12}deg) rotateY(${(px - .5) * 14}deg) translateY(-8px)`;
+      card.style.setProperty('--gx', px * 100 + '%'); card.style.setProperty('--gy', py * 100 + '%');
+    }
+    const mag = e.target.closest('[data-mag]');
+    $$('[data-mag]').forEach(b => { if (b !== mag) { b.style.setProperty('--mx', '0px'); b.style.setProperty('--my', '0px'); } });
+    if (mag) {
+      const r = mag.getBoundingClientRect();
+      mag.style.setProperty('--mx', (e.clientX - r.left - r.width / 2) * .22 + 'px');
+      mag.style.setProperty('--my', (e.clientY - r.top - r.height / 2) * .3 + 'px');
+    }
+    const art = $('#heroArt').getBoundingClientRect();
+    if (art.bottom > 0) {
+      const dx = (e.clientX / innerWidth - .5), dy = (e.clientY / innerHeight - .5);
+      $('#robot').style.setProperty('--px', dx * -26 + 'px'); $('#robot').style.setProperty('--py', dy * -20 + 'px');
+      $$('.float-tag').forEach((t, i) => { t.style.setProperty('--tx', dx * (i ? 40 : -34) + 'px'); t.style.setProperty('--ty', dy * (i ? 30 : -26) + 'px'); });
+    }
+  }, { passive: true });
+  document.addEventListener('pointerleave', () => $$('[data-tilt]').forEach(c => c.style.transform = ''));
+}
+
+/* ================== 倒數 ================== */
+(function countdown() {
+  const ids = ['cdD', 'cdH', 'cdM', 'cdS'];
+  function upd() {
+    const next = SESSIONS.find(s => s.start.getTime() > Date.now());
+    if (!next) { $('#countdown').hidden = true; return; }
+    $('#cdLabel').textContent = next === SESSIONS[0] ? '距離第一場闖關還有' : `距離下一場（${next.md} ${next.slot.name}）還有`;
+    let ms = next.start - Date.now();
+    const v = [Math.floor(ms / 864e5), Math.floor(ms / 36e5) % 24, Math.floor(ms / 6e4) % 60, Math.floor(ms / 1e3) % 60];
+    ids.forEach((id, i) => {
+      const el = $('#' + id), t = String(v[i]).padStart(2, '0');
+      if (el.textContent !== t) { el.textContent = t; el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); }
+    });
+  }
+  upd(); setInterval(upd, 1000);
+})();
+
+/* ================== 關卡卡片／彈窗 ================== */
+$('#stations').addEventListener('click', e => { const b = e.target.closest('[data-st]'); if (b) openStation(+b.dataset.st); });
+$$('dialog.modal').forEach(d => {
+  d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
+});
+$('[data-close-go]').addEventListener('click', () => $('#stModal').close());
+
+/* ================== 藥水實驗室 ================== */
+const LAB = { pea: 0, sprite: 0, alk: 0 };
+const TARGETS = [
+  { name: '粉紅色', c: '#E8336D', ok: ph => ph < 4.3 },
+  { name: '紫色', c: '#A04FD8', ok: ph => ph >= 4.3 && ph < 6 },
+  { name: '藍色', c: '#3D6FE8', ok: ph => ph >= 6 && ph < 7.6 },
+  { name: '藍綠色', c: '#1FA0B8', ok: ph => ph >= 7.6 }
+];
+let target = TARGETS[1];
+const PH_STOPS = [[2, [232, 51, 109]], [4, [176, 75, 214]], [5.5, [108, 91, 230]], [7, [61, 111, 232]], [8.5, [31, 160, 184]], [10, [61, 191, 122]]];
+function phColor(ph) {
+  for (let i = 1; i < PH_STOPS.length; i++) if (ph <= PH_STOPS[i][0] || i === PH_STOPS.length - 1) {
+    const [a, ca] = PH_STOPS[i - 1], [b, cb] = PH_STOPS[i], t = Math.max(0, Math.min(1, (ph - a) / (b - a)));
+    return `rgb(${ca.map((v, k) => Math.round(v + (cb[k] - v) * t)).join(',')})`;
+  }
+}
+const labTotal = () => LAB.pea + LAB.sprite + LAB.alk;
+const labPH = () => labTotal() ? (LAB.pea * 6.8 + LAB.sprite * 3 + LAB.alk * 10) / labTotal() : 7;
+function labPaint() {
+  const tot = labTotal(), h = Math.min(8, tot) / 8 * 220, ph = labPH();
+  const liq = $('#liquid');
+  liq.setAttribute('y', 288 - h); liq.setAttribute('height', h + 12);
+  liq.setAttribute('fill', LAB.pea ? phColor(ph) : (tot ? 'rgba(220,240,250,.8)' : '#CFE7F5'));
+  $('#phMark').style.setProperty('--ph', tot && LAB.pea ? (ph - 2) / 8 * 100 : 50);
+  $('#labTarget').style.setProperty('--tc', target.c); $('#labTargetName').textContent = target.name;
+}
+function labMsg(t) { $('#labMsg').innerHTML = t; }
+function bubbles() {
+  const g = $('#bubbles'); if (reduce) return;
+  for (let k = 0; k < 8; k++) {
+    const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c.setAttribute('cx', 70 + Math.random() * 100); c.setAttribute('cy', 280); c.setAttribute('r', 2 + Math.random() * 5); c.setAttribute('fill', 'rgba(255,255,255,.7)');
+    g.appendChild(c);
+    c.animate([{ transform: 'translateY(0)', opacity: 1 }, { transform: `translateY(-${80 + Math.random() * 120}px)`, opacity: 0 }], { duration: 900 + Math.random() * 700, delay: k * 60, easing: 'ease-out' }).onfinish = () => c.remove();
+  }
+}
+function streamFx(col) {
+  const g = $('#stream'); if (reduce) return;
+  const p = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  p.setAttribute('x', 112); p.setAttribute('y', -30); p.setAttribute('width', 14); p.setAttribute('height', 0); p.setAttribute('rx', 7); p.setAttribute('fill', col);
+  g.appendChild(p);
+  p.animate([{ height: '0px', opacity: 1 }, { height: '260px', opacity: 1, offset: .5 }, { height: '260px', opacity: 0 }], { duration: 700, easing: 'ease-in' }).onfinish = () => p.remove();
+}
+$$('[data-pour]').forEach(b => b.addEventListener('click', () => {
+  const k = b.dataset.pour;
+  if (labTotal() >= 8) { labMsg('杯子滿了！按「倒掉重來」再試一次 😄'); return; }
+  if (k !== 'pea' && !LAB.pea) { labMsg('先倒<b>蝶豆花汁</b>，才看得到顏色變化喔！'); }
+  LAB[k]++;
+  streamFx(getComputedStyle(b).getPropertyValue('--pc'));
+  setTimeout(() => { labPaint(); bubbles(); labCheck(); }, reduce ? 0 : 320);
+}));
+function labCheck() {
+  if (!LAB.pea) return;
+  const ph = labPH(), name = ph < 4.3 ? '粉紅色' : ph < 6 ? '紫色' : ph < 7.6 ? '藍色' : '藍綠色';
+  if (target.ok(ph) && (LAB.sprite || LAB.alk || target.name === '藍色')) {
+    labMsg(`🎉 <b>調配成功！</b>你調出了${name}（pH≈${ph.toFixed(1)}）。現場還有更多色卡等你挑戰！`);
+    const r = $('.lab-cup').getBoundingClientRect();
+    for (let k = 0; k < 24; k++) particle(r.left + r.width / 2, r.top + r.height * .4, { ang: k / 24 * 6.28, dist: 90 + Math.random() * 80, size: 16 });
+  } else {
+    const hint = ph > 6 && target.c !== '#1FA0B8' && target.name !== '藍色' ? '加點<b>雪碧</b>讓它更酸' : ph < 6 && (target.name === '藍色' || target.name === '藍綠色') ? '加點<b>鹼性水</b>讓它偏鹼' : '再微調一下';
+    labMsg(`現在是<b>${name}</b>（pH≈${ph.toFixed(1)}），目標是<b>${target.name}</b>：${hint}！`);
+  }
+}
+$('#labReset').addEventListener('click', () => { LAB.pea = LAB.sprite = LAB.alk = 0; labPaint(); labMsg('杯子是空的，先倒一點蝶豆花汁吧！'); });
+$('#labNew').addEventListener('click', () => { const o = TARGETS.filter(t => t !== target); target = o[Math.floor(Math.random() * o.length)]; labPaint(); labCheck(); if (!LAB.pea) labMsg(`新色卡：<b>${target.name}</b>！先倒一點蝶豆花汁吧。`); });
+target = TARGETS[Math.floor(Math.random() * TARGETS.length)]; labPaint();
+
+/* ================== 報名表 ================== */
+const form = $('#reg');
+const halfWidth = v => v.replace(/[０-９Ａ-Ｚａ-ｚ]/g, d => String.fromCharCode(d.charCodeAt(0) - 0xFEE0));
+// 全形轉半形、去掉空白／橫線／括號，例如 (07)381-4526、０９１２…
+const normPhone = v => halfWidth(v).replace(/[\s\-()（）]/g, '');
+const phoneOK = v => /^0\d{8,9}$/.test(normPhone(v));
+const emailOK = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+const normId = v => halfWidth(v).toUpperCase().replace(/[\s-]/g, '');
+// 身分證、新式居留證（第 2 碼 8/9）、舊式居留證（第 2 碼 A–D）檢查碼
+function twIdOK(id) {
+  const L = 'ABCDEFGHJKLMNPQRSTUVXYWZIO';
+  if (!/^[A-Z][A-D0-9]\d{8}$/.test(id)) return false;
+  const n = L.indexOf(id[0]) + 10;
+  const d1 = /[A-D]/.test(id[1]) ? (L.indexOf(id[1]) + 10) % 10 : +id[1];
+  const ds = [d1, ...id.slice(2).split('').map(Number)], w = [8, 7, 6, 5, 4, 3, 2, 1, 1];
+  return (Math.floor(n / 10) + (n % 10) * 9 + ds.reduce((s, d, i) => s + d * w[i], 0)) % 10 === 0;
+}
+const GRADES = ['國小二年級', '國小三年級', '國小四年級', '國小五年級', '國小六年級'];
+let kidSeq = 0;
+function kidHTML(id) {
+  return `<div class="kid" data-kid="${id}">
+    <div class="kid-h"><span class="av"><svg class="ico"><use href="#i-kid"/></svg></span><b class="kt">孩子 1</b>
+      <button type="button" class="kid-del"><svg class="ico"><use href="#i-x"/></svg>移除</button></div>
+    <div class="grid2">
+      <div class="field"><label for="k${id}_name">法定姓名<em>*</em></label><input type="text" id="k${id}_name" data-k="name" maxlength="30" placeholder="與證件相同" autocomplete="off" required><div class="msg">請填寫孩子的法定姓名</div></div>
+      <div class="field"><label for="k${id}_birth">出生年月日<em>*</em></label><input type="date" id="k${id}_birth" data-k="birth" min="2012-01-01" max="2021-12-31" required><div class="msg">請選擇出生年月日</div></div>
+      <div class="field"><span class="lb">性別<em>*</em></span><div class="pills" role="radiogroup" aria-label="性別">
+        <label><input type="radio" name="k${id}_gender" value="男"><span>男生</span></label><label><input type="radio" name="k${id}_gender" value="女"><span>女生</span></label></div><div class="msg">請選擇性別</div></div>
+      <div class="field"><label for="k${id}_grade">年級<em>*</em></label><select id="k${id}_grade" data-k="grade" required><option value="">請選擇</option>${GRADES.map(g => `<option>${g}</option>`).join('')}</select><div class="msg">請選擇年級</div></div>
+      <div class="field"><span class="lb">國籍<em>*</em></span><div class="pills" role="radiogroup" aria-label="國籍">
+        <label><input type="radio" name="k${id}_nat" value="中華民國" checked><span>中華民國</span></label><label><input type="radio" name="k${id}_nat" value="其他"><span>其他國籍</span></label></div></div>
+      <div class="field"><label for="k${id}_idNo" class="idlbl">身分證字號<em>*</em></label><input type="text" id="k${id}_idNo" data-k="idNo" maxlength="20" placeholder="A123456789" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
+        <span class="id-note"><svg class="ico"><use href="#i-shield"/></svg>僅用於辦理活動保險</span><div class="msg">證號格式不正確，請再確認一次</div></div>
+    </div>
+    <div class="grid2" style="margin-top:18px">
+      <div class="field"><label for="k${id}_allergy">飲食過敏<span class="opt">沒有可留空</span></label><input type="text" id="k${id}_allergy" data-k="allergy" maxlength="60" placeholder="例：蛋、花生">
+        <div class="quick">${['蛋', '奶', '麩質', '堅果', '蝶豆花'].map(a => `<button type="button" data-al="${a}">+ ${a}</button>`).join('')}</div></div>
+      <div class="field"><label for="k${id}_needs">特殊協助需求／健康注意事項<span class="opt">選填</span></label><input type="text" id="k${id}_needs" data-k="needs" maxlength="100" placeholder="例：需要家長陪同、氣喘"></div>
+    </div>
+  </div>`;
+}
+function addKid() {
+  if ($$('.kid').length >= CONFIG.MAX_KIDS) return;
+  $('#kids').insertAdjacentHTML('beforeend', kidHTML(++kidSeq));
+  renumberKids(); updateSummary();
+}
+function renumberKids() {
+  const ks = $$('.kid');
+  ks.forEach((k, i) => { $('.kt', k).textContent = ks.length > 1 ? `孩子 ${i + 1}` : '孩子資料'; $('.kid-del', k).hidden = ks.length === 1; });
+  $('#addKid').hidden = ks.length >= CONFIG.MAX_KIDS;
+}
+$('#addKid').addEventListener('click', () => { addKid(); const ks = $$('.kid'); ks[ks.length - 1].scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+$('#kids').addEventListener('click', e => {
+  const del = e.target.closest('.kid-del');
+  if (del) { const k = del.closest('.kid'); k.classList.add('bye'); setTimeout(() => { k.remove(); renumberKids(); updateSummary(); }, reduce ? 0 : 330); }
+  const al = e.target.closest('[data-al]');
+  if (al) { const inp = $('[data-k=allergy]', al.closest('.field')); const cur = inp.value.split(/[、,，]\s*/).filter(Boolean); if (!cur.includes(al.dataset.al)) cur.push(al.dataset.al); inp.value = cur.join('、'); updateProgress(); }
+});
+$('#kids').addEventListener('change', e => {
+  if (/_nat$/.test(e.target.name)) {
+    const k = e.target.closest('.kid'), tw = e.target.value === '中華民國';
+    $('.idlbl', k).innerHTML = (tw ? '身分證字號' : '居留證號（或護照號碼）') + '<em>*</em>';
+    $('[data-k=idNo]', k).placeholder = tw ? 'A123456789' : 'A800000014';
+  }
+});
+$('#kids').addEventListener('input', e => { if (e.target.dataset.k === 'idNo') { const p = e.target.selectionStart; e.target.value = normId(e.target.value); try { e.target.setSelectionRange(p, p); } catch (_) {} } });
+
+// 緊急聯絡人同監護人
+const sameAsG = $('#sameAsG');
+function syncEmergency() {
+  const on = sameAsG.checked;
+  ['emergencyName', 'emergencyPhone', 'emergencyRelation'].forEach(id => { $('#' + id).readOnly = on; });
+  if (on) { $('#emergencyName').value = $('#guardianName').value; $('#emergencyPhone').value = $('#guardianPhone').value; $('#emergencyRelation').value = '監護人本人'; $$('.grid3 .field').forEach(f => f.classList.remove('err')); }
+  else if ($('#emergencyRelation').value === '監護人本人') { ['emergencyName', 'emergencyPhone', 'emergencyRelation'].forEach(id => $('#' + id).value = ''); }
+}
+sameAsG.addEventListener('change', () => { syncEmergency(); updateProgress(); });
+['guardianName', 'guardianPhone'].forEach(id => $('#' + id).addEventListener('input', () => sameAsG.checked && syncEmergency()));
+
+// 從活動資訊的場次按鈕直接選場次
+$('#venues').addEventListener('click', e => {
+  const b = e.target.closest('[data-pick]'); if (!b) return;
+  const r = form.querySelector(`input[name=session][value="${b.dataset.pick}"]`);
+  if (r && !r.disabled) { r.checked = true; $('#sessField').classList.remove('err'); updateSummary(); }
+  $('#register').scrollIntoView({ behavior: 'smooth' });
+});
+
+const currentSession = () => { const r = form.querySelector('input[name=session]:checked'); return r ? SESSIONS.find(s => s.id === r.value) : null; };
+function payDue(s) {
+  const due = new Date(s.dt.getTime() - CONFIG.PAY_DAYS_BEFORE * 864e5), today = new Date(new Date().toDateString());
+  return due < today ? '請於報名當天完成轉帳' : `${due.getMonth() + 1}/${due.getDate()}（${WEEK[due.getDay()]}）23:59 前`;
+}
+function updateSummary() {
+  const s = currentSession(), n = $$('.kid').length;
+  $('#sumSess').textContent = s ? `${s.md}（${s.wk}）${s.slot.name} ${s.slot.time}・${s.venue.name}` : '尚未選擇場次';
+  $('#sumKids').textContent = `${n} 位孩子 × NT$${fmt(CONFIG.PRICE)}${s ? '・付款期限 ' + payDue(s) : ''}`;
+  $('#sumAmt').textContent = 'NT$' + fmt(n * CONFIG.PRICE);
+  updateProgress();
+}
+function updateProgress() {
+  const kids = $$('.kid');
+  const checks = [!!currentSession(), ...['guardianName', 'guardianPhone', 'email', 'emergencyName', 'emergencyRelation', 'emergencyPhone'].map(id => $('#' + id).value.trim() !== ''),
+    !!form.querySelector('input[name=photo]:checked'), $('#allergenAck').checked, $('#refundAck').checked, $('#consent').checked];
+  kids.forEach(k => { $$('[data-k=name],[data-k=birth],[data-k=grade],[data-k=idNo]', k).forEach(i => checks.push(i.value.trim() !== '')); checks.push(!!k.querySelector('input[name$=_gender]:checked')); });
+  $('#fprog').style.width = (checks.filter(Boolean).length / checks.length * 100) + '%';
+}
+form.addEventListener('input', e => { const f = e.target.closest('.field'); if (f) f.classList.remove('err'); const c = e.target.closest('.check'); if (c) c.classList.remove('err'); updateProgress(); });
+form.addEventListener('change', e => { const f = e.target.closest('.field'); if (f) f.classList.remove('err'); if (e.target.name === 'session') { $('#sessField').classList.remove('err'); updateSummary(); } updateProgress(); });
+
+function validate() {
+  let ok = true, first = null;
+  const mark = (el, bad) => { el.classList.remove('err'); if (bad) { void el.offsetWidth; el.classList.add('err'); ok = false; first = first || el; } };
+  mark($('#sessField'), !currentSession());
+  $$('.kid').forEach(k => {
+    $$('[data-k=name],[data-k=birth],[data-k=grade]', k).forEach(i => mark(i.closest('.field'), !i.value.trim()));
+    mark($('input[name$=_gender]', k).closest('.field'), !k.querySelector('input[name$=_gender]:checked'));
+    const idEl = $('[data-k=idNo]', k), id = normId(idEl.value), tw = k.querySelector('input[name$=_nat]:checked').value === '中華民國';
+    mark(idEl.closest('.field'), tw ? !twIdOK(id) : !/^[A-Z0-9]{6,20}$/.test(id));
+  });
+  mark($('#guardianName').closest('.field'), !$('#guardianName').value.trim());
+  mark($('#guardianPhone').closest('.field'), !phoneOK($('#guardianPhone').value));
+  mark($('#email').closest('.field'), !emailOK($('#email').value));
+  mark($('#emergencyName').closest('.field'), !$('#emergencyName').value.trim());
+  mark($('#emergencyRelation').closest('.field'), !$('#emergencyRelation').value.trim());
+  mark($('#emergencyPhone').closest('.field'), !phoneOK($('#emergencyPhone').value));
+  mark($('#photoField'), !form.querySelector('input[name=photo]:checked'));
+  mark($('#allergenBox'), !$('#allergenAck').checked);
+  mark($('#refundBox'), !$('#refundAck').checked);
+  mark($('#consentBox'), !$('#consent').checked);
+  if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  return ok;
+}
+function makeRef() {
+  const d = new Date(), p = n => String(n).padStart(2, '0');
+  return `XMAS-${p(d.getMonth() + 1)}${p(d.getDate())}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+}
+// 送資料給 Apps Script 並讀回結果（Apps Script 的回應有 CORS 標頭，可以讀到 JSON）
+// 網址留空時，加上 ?demo=1 可以用假資料走完整個流程（不會寫入試算表）
+async function api(obj) {
+  if (!CONFIG.SHEET_WEBHOOK_URL && params.has('demo')) {
+    await new Promise(r => setTimeout(r, 900));
+    return obj.action === 'payment' ? { ok: true, email: ctx.email } : { ok: true, refCode: obj.refCode, amount: obj.kids.length * CONFIG.PRICE, due: payDue(currentSession()) };
+  }
+  const ctrl = new AbortController(), t = setTimeout(() => ctrl.abort(), 45000);
+  try {
+    const r = await fetch(CONFIG.SHEET_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(obj), signal: ctrl.signal });
+    const j = await r.json();
+    if (!j.ok) throw new Error(j.error || '系統忙碌中，請稍後再試');
+    return j;
+  } catch (ex) {
+    if (ex.name === 'AbortError') throw new Error('連線逾時，請檢查網路後再試一次');
+    if (ex instanceof TypeError) throw new Error('網路連線失敗，資料尚未送出，請檢查網路後再試一次');
+    throw ex;
+  } finally { clearTimeout(t); }
+}
+async function busy(btn, label, fn) {
+  const span = $('span', btn), old = span.textContent;
+  btn.disabled = true; span.textContent = label;
+  try { return await fn(); } finally { btn.disabled = false; span.textContent = old; }
+}
+const showErr = (el, msg) => { el.textContent = '⚠️ ' + msg; el.classList.remove('on'); void el.offsetWidth; el.classList.add('on'); };
+let ctx = null; // 目前這筆報名（報名編號、Email、金額…）
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const err = $('#formErr'); err.classList.remove('on');
+  if ($('#hp_x7').value) return; // 機器人（隱藏欄位被填）
+  if (!validate()) return;
+  if (!CONFIG.SHEET_WEBHOOK_URL && !params.has('demo')) { showErr(err, '報名系統尚未完成設定，請稍後再試或透過官方 LINE 聯繫我們。'); return; }
+  const s = currentSession();
+  const data = {
+    refCode: makeRef(), sessionId: s.id,
+    kids: $$('.kid').map(k => ({
+      name: $('[data-k=name]', k).value.trim(), birth: $('[data-k=birth]', k).value, idNo: normId($('[data-k=idNo]', k).value),
+      gender: k.querySelector('input[name$=_gender]:checked').value, nationality: k.querySelector('input[name$=_nat]:checked').value,
+      grade: $('[data-k=grade]', k).value, allergy: $('[data-k=allergy]', k).value.trim(), needs: $('[data-k=needs]', k).value.trim()
+    })),
+    guardianName: $('#guardianName').value.trim(), guardianPhone: normPhone($('#guardianPhone').value), email: $('#email').value.trim(),
+    emergencyName: $('#emergencyName').value.trim(), emergencyRelation: $('#emergencyRelation').value.trim(), emergencyPhone: normPhone($('#emergencyPhone').value),
+    photoConsent: form.querySelector('input[name=photo]:checked').value, allergenAck: '已確認', refundAck: '已讀', consent: '同意',
+    source: $('#source').value, note: $('#note').value.trim(),
+    pageStyle: style() === 'cute' ? '可愛風' : '科技風', submittedAt: new Date().toISOString()
+  };
+  try {
+    const res = await busy($('#submitBtn'), '傳送中…', () => api(data));
+    ctx = { ...data, ...res, names: data.kids.map(k => k.name).join('、') };
+    form.reset(); $('#kids').innerHTML = ''; addKid(); syncEmergency(); updateSummary();
+    openPay();
+  } catch (ex) { showErr(err, ex.message); }
+});
+
+function openPay() {
+  $('#m-pay').hidden = false; $('#m-final').hidden = true;
+  $('#payAmt').textContent = 'NT$' + fmt(+ctx.amount);
+  $('#payDue').textContent = ctx.due;
+  $('#payRef').textContent = ctx.refCode; $('#payMail').textContent = ctx.email;
+  $('#last5').value = ''; $('#payErr').classList.remove('on');
+  $('#done').showModal(); setTimeout(() => $('#last5').focus(), 60);
+  confetti(60);
+}
+$('#last5').addEventListener('input', e => { e.target.value = halfWidth(e.target.value).replace(/\D/g, '').slice(0, 5); $('#payErr').classList.remove('on'); });
+$('#last5').addEventListener('keydown', e => { if (e.key === 'Enter') $('#paySend').click(); });
+$('#paySend').addEventListener('click', async () => {
+  const last5 = $('#last5').value;
+  if (!/^\d{5}$/.test(last5)) { showErr($('#payErr'), '請填寫 5 位數字'); $('#last5').focus(); return; }
+  try {
+    const res = await busy($('#paySend'), '傳送中…', () => api({ action: 'payment', refCode: ctx.refCode, last5 }));
+    $('#m-pay').hidden = true; $('#m-final').hidden = false;
+    $('#finalMsg').textContent = `已收到 ${ctx.names} 的報名與轉帳資訊。工作人員核對款項後，會寄付款確認信到 ${res.email || ctx.email}（沒看到請檢查垃圾郵件）。活動當天到服務台報到就能開始闖關！`;
+    $('#doneRef').textContent = ctx.refCode;
+    confetti(200);
+  } catch (ex) { showErr($('#payErr'), ex.message); }
+});
+$('#copyAcc').addEventListener('click', async e => {
+  const sp = $('span', e.currentTarget);
+  try { await navigator.clipboard.writeText(CONFIG.ACCOUNT); sp.textContent = '已複製 ✓'; }
+  catch (_) { sp.textContent = '請手動複製'; }
+});
+
+/* ================== 彩帶 ================== */
+function confetti(n) {
+  if (reduce) return;
+  const c = $('#confetti'), x = c.getContext('2d'); c.width = innerWidth; c.height = innerHeight;
+  // 開著的 dialog 在最上層，畫布要放進去才不會被擋住
+  (document.querySelector('dialog[open]') || document.body).appendChild(c);
+  const tech = style() === 'tech';
+  const cols = tech ? ['#2FE6FF', '#21F0A8', '#FFD23F', '#ffffff', '#FF3D6E'] : ['#D7322B', '#F2A516', '#1E7A49', '#E86FA0', '#2F7DE0', '#ffffff'];
+  const ps = Array.from({ length: n }, () => ({ x: innerWidth / 2, y: innerHeight * .4, vx: (Math.random() - .5) * 20, vy: Math.random() * -17 - 4, s: Math.random() * 9 + 6, c: cols[Math.floor(Math.random() * cols.length)], r: Math.random() * 6, vr: (Math.random() - .5) * .3, k: tech ? 0 : Math.floor(Math.random() * 3) }));
+  let f = 0;
+  (function frame() {
+    x.clearRect(0, 0, c.width, c.height);
+    ps.forEach(p => {
+      p.vy += .42; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.r += p.vr;
+      x.save(); x.translate(p.x, p.y); x.rotate(p.r); x.fillStyle = p.c;
+      if (tech) { x.shadowColor = p.c; x.shadowBlur = 8; x.fillRect(-p.s / 2, -p.s / 2, p.s / 1.6, p.s / 1.6); }
+      else if (p.k === 0) { x.beginPath(); x.arc(0, 0, p.s / 2, 0, 6.28); x.fill(); }
+      else if (p.k === 1) { x.font = `${p.s * 2}px sans-serif`; x.fillText('❄', -p.s / 2, p.s / 2); }
+      else x.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2);
+      x.restore();
+    });
+    if (++f < 200) requestAnimationFrame(frame); else x.clearRect(0, 0, c.width, c.height);
+  })();
+}
+
+addKid();
+updateSummary();
+</script>
+</body>
+</html>
