@@ -531,6 +531,29 @@ html[data-style=tech] .due { background: rgba(255, 61, 110, .16); color: #FF9BB4
 .mnote a { color: var(--a2); font-weight: 900; }
 #confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 300; }
 
+/* ================== 回官網橫幅 ================== */
+.home-banner { padding: 40px 0 10px; }
+.hb { position: relative; overflow: hidden; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 30px; padding: 30px 36px; text-decoration: none; color: inherit; transition: transform .35s var(--ease), box-shadow .35s; }
+.hb:hover { transform: translateY(-6px); box-shadow: var(--shadow-h); }
+.hb img { width: 132px; height: 132px; border-radius: 28px; background: #fff; box-shadow: 0 6px 0 rgba(0, 0, 0, .08); transition: transform .5s var(--spring); }
+.hb:hover img { transform: rotate(-6deg) scale(1.05); }
+.hb small { display: block; font: 700 14px var(--lfont); letter-spacing: .2em; color: var(--a2); }
+.hb b { display: block; margin: 4px 0 6px; font: 400 clamp(26px, 3.4vw, 38px)/1.25 var(--hfont); }
+.hb p { margin: 0; color: var(--ink2); font-size: 18px; }
+.hb .go { display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; border-radius: 99px; font-weight: 900; font-size: 19px; background: #0D2A6B; color: #fff; white-space: nowrap; box-shadow: 0 6px 0 #06173F; }
+.hb .go .ico { transition: transform .3s var(--spring); }
+.hb:hover .go .ico { transform: translateX(6px); }
+html[data-style=cute] .hb { background: linear-gradient(115deg, #fff 0%, #EEF5FF 60%, #E2F6F4 100%); }
+html[data-style=tech] .hb { border: 1px solid var(--line); }
+html[data-style=tech] .hb small { color: var(--a4); }
+html[data-style=tech] .hb b { font-family: 'Noto Sans TC'; font-weight: 900; }
+html[data-style=tech] .hb img { box-shadow: 0 0 30px rgba(47, 230, 255, .35); }
+html[data-style=tech] .hb .go { background: var(--btn); color: var(--btn-ink); box-shadow: var(--btn-shadow); border-radius: 10px; }
+@media (max-width: 720px) {
+  .hb { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 28px 20px; gap: 16px; }
+  .hb img { width: 110px; height: 110px; }
+}
+
 /* ================== 頁尾 ================== */
 footer { padding: 70px 0 120px; text-align: center; }
 html[data-style=cute] footer { background: linear-gradient(transparent, #FFE3C4); }
@@ -1019,6 +1042,20 @@ footer small { color: var(--ink2); font-size: 15px; }
   </div>
 </dialog>
 <canvas id="confetti" aria-hidden="true"></canvas>
+
+<section class="home-banner">
+  <div class="wrap">
+    <a class="hb card" href="https://weiyan.designjarvis.com/">
+      <img src="img/weiyan-logo-square.webp" alt="微研 WEIYAN 科學教育・探索未來" loading="lazy">
+      <span>
+        <small>WEIYAN OFFICIAL SITE</small>
+        <b>還想玩更多？到微研官網逛逛！</b>
+        <p>AI 自走車、雷切科學課、3D 列印、營隊活動與每日科普，都在微研官網。</p>
+      </span>
+      <span class="go">前往微研官網<svg class="ico"><use href="#i-arrow"/></svg></span>
+    </a>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
