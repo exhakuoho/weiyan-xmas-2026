@@ -30,6 +30,12 @@
 「魔法藥水實驗室」小遊戲（蝶豆花酸鹼變色，對到色卡會爆彩帶）／點活動資訊的場次按鈕直接帶入報名表／報名完成彩帶。
 有開「減少動態效果」的裝置會自動關掉這些動畫。
 
+## 網址與部署（2026-10-21 上線）
+
+- 網站：https://weiyan-xmas-2026.pages.dev/（可愛風）、https://weiyan-xmas-2026.pages.dev/?style=tech（科技風）
+- GitHub：`exhakuoho/weiyan-xmas-2026`（main 分支）→ Cloudflare Pages 專案 `weiyan-xmas-2026`（randd 帳號），推上 main 約 30 秒後自動更新
+- Repo 結構比照雷切網站：`index.html`、`img/`、`google-apps-script/Code.gs`、`README.md`（＝這份說明）
+
 ## 目前的連動設定（2026-10-21 已上線測試）
 
 - 試算表：randdlaboratary@gmail.com 的「2026 聖誕闖關日 報名資料」，報名寫在「報名資料」分頁（空白的「工作表1」可以刪掉）
