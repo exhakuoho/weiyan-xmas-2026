@@ -7,16 +7,16 @@
 | 檔案 | 用途 |
 |---|---|
 | `index.html` | 報名網站本體（單一檔案，可愛風／科技風可切換） |
-| `img/cute/` | 從「聖誕闖關體驗流程海報.png」裁出的插圖：`st1–5`（五關）、`checkin`、`redeem`、`takehome`、`santa`、`kids` |
-| `img/tech/` | 從「1016 傳單.png」裁出的五關實景照：`st1–5` |
+| `img/cute/` | 從「聖誕闖關體驗流程海報.png」裁出的插圖：`checkin`、`redeem`、`takehome`、`santa`、`kids`；五關 `st1–5` 與科技風相同 |
+| `img/tech/` | 五關圖 `st1–5`，10/26 起改從「1026 傳單_空白欄位原圖.webp」裁出（舊版取自「1016 傳單.png」，可在 GitHub 歷史找回） |
 | `img/robot.webp` | 首頁主視覺機器人（來源 `christmas-robot.png`，已縮小） |
 | `img/pay-qr.png` | 中國信託轉帳 QR Code（沿用雷切報名網站） |
 | `img/weiyan-*.webp` | 微研 LOGO |
 | `google-apps-script/Code.gs` | 接收報名資料、寫入 Google 試算表、寄信的程式 |
 
 > ⚠️ 10/25 起第 3 關改為「聖誕拼裝大師」（3D 列印 Kit Card）、第 5 關改為四弦音箱解四位密碼，
-> 網站文字已更新，但圖片仍是舊玩法：`st3` 是薑餅屋裝飾、`st5` 是紙盒寶箱、`takehome` 手上拿薑餅屋。
-> 有新素材後換掉 `img/cute/st3.webp`、`img/tech/st3.webp`、`img/cute/st5.webp`、`img/tech/st5.webp`（必要時含 `img/cute/takehome.webp`）即可。
+> 網站文字已更新；10/26 五關圖已換成新傳單的圖（第 3 關聖誕屋、第 5 關弦音箱＋寶箱）。
+> 只剩 `img/cute/takehome.webp`（流程「帶回驚喜」）手上仍拿薑餅屋，有新素材再換。
 
 ## 兩種風格
 
@@ -115,7 +115,7 @@
 - **飛米樂高正式地址**（目前寫「詳細地址於報名確認信通知」）
 - **建工校區行政大樓的樓層／教室／服務台位置**（可寫進 Apps Script 付款確認信）
 - 轉帳帳戶目前沿用雷切報名網站的中國信託帳號，請確認這個活動也用同一個帳戶
-- 第 3 關 Kit Card 拼裝、第 5 關四弦音箱的新照片（換掉舊的薑餅屋、紙盒寶箱圖）
+- 第 3 關 Kit Card、第 5 關四弦音箱的實拍照（目前用新傳單的示意圖）
 
 ## 五、上線方式
 
